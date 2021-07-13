@@ -17,11 +17,7 @@ function isInViewport(element) {
 
 export default class Home {
   constructor() {
-    this.handleHiddenHover(".project");
-    this.handleHiddenHover(".solution");
     this.matchOfferHeights();
-    this.handleIndustryHover();
-    this.renderSlickCarousel();
   }
 
   renderSlickCarousel() {

@@ -31,7 +31,7 @@ if( !empty($hpf_client_slider_left_arrow ) ){
     $(document).ready(function () {
         setTimeout(()=>{
 $(".owl-carousel:not(.owl-carousel-clients)").owlCarousel({
-            transitionStyle: 'customHinge',
+            transitionStyle: 'slide',
             loop: true,
             navigation: true,
             autoplay: true,

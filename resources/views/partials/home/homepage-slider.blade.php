@@ -221,3 +221,4 @@ $slide_image = !empty(get_field('slide_image'))
     });
 
 </script>
+
