@@ -18,100 +18,27 @@
         </div>
         <div class="container">
             <div class="col-sm-12 client-slider">
-                <div class="owl-carousel-clients desktopOnly" @if( $title_border == '2' ) {{ 'style="border-top: 0px !important;";' }} @endif >
+                <div class="owl-carousel-clients" <?php if(get_field('title_border') == '2' ) { echo 'style="border-top: 0px !important;"'; } ?>>
+					
+					<?php while( have_rows('select_clients') ): the_row();?>
+					<?php
+						$clientimage = get_sub_field('client_logo');
+						$padding_top = get_sub_field('client_logo_padding_top');
+						$padding_bottom = get_sub_field('client_logo_padding_bottom');
 
-                    <?php
-                    
-                    $rows = get_field('select_clients');
-                    if($rows){
-
-                        for($i=0; $i<count($rows); $i++){
-
-                            $client = $rows[$i];
-                            $nextClient = $rows[$i+1];
-                            
-                            ?><div class="item two-logos">
-                                <img src="{{$client['client_logo']}}" style="padding-top: {{ $client['client_logo_padding_top'] }}; padding-bottom: {{ $client['client_logo_padding_bottom'] }};" />
-                                <?php if($i < count($rows) - 1){ ?>
-                                <img src="{{$nextClient['client_logo']}}" style="padding-top: {{ $client['client_logo_padding_top'] }}; padding-bottom: {{ $client['client_logo_padding_bottom'] }};" />
-                                <?php } ?>
-                            </div><?php
-
-                            $i++;
-
-                        }
-
-                    }
-
-                    ?>
-
-                    
-                
-                </div>
-                <div class="owl-carousel-clients mobileOnly" @if( $title_border == '2' ) {{ 'style="border-top: 0px !important;";' }} @endif >
-
-                    <?php
-                    
-                    $rows = get_field('select_clients');
-                    if($rows){
-
-                        for($i=0; $i<count($rows); $i++){
-
-                            $client = $rows[$i];
-                            $nextClient = $rows[$i+1];
-                            $thirdClient = $rows[$i+2];
-                            $fourthClient = $rows[$i+3];
-                            
-                            ?><div class="item four-logos">
-                                <img src="{{$client['client_logo']}}" style="padding-top: {{ $client['client_logo_padding_top'] }}; padding-bottom: {{ $client['client_logo_padding_bottom'] }};" />
-                                <img src="{{$nextClient['client_logo']}}" style="padding-top: {{ $client['client_logo_padding_top'] }}; padding-bottom: {{ $client['client_logo_padding_bottom'] }};" />
-                                <img src="{{$thirdClient['client_logo']}}" style="padding-top: {{ $client['client_logo_padding_top'] }}; padding-bottom: {{ $client['client_logo_padding_bottom'] }};" />
-                                <?php if($i < count($rows) - 4){ ?>
-                                <img src="{{$fourthClient['client_logo']}}" style="padding-top: {{ $client['client_logo_padding_top'] }}; padding-bottom: {{ $client['client_logo_padding_bottom'] }};" />
-                                <?php } ?>
-                            </div><?php
-
-                            $i+=3;
-
-                        }
-
-                    }
-
-                    ?>
-
-                    
-                
-                </div>
+					?>
+						<div class="item">
+							<img src="<?php echo $clientimage ?>" style="padding-top: <?php echo $padding_top; ?>; padding-bottom: <?php echo $padding_bottom; ?>;" />
+						</div>
+					<?php 
+						 endwhile; ?>
+						 
+					</div>
             </div>
         </div>
     </section>
     
 @endif
 
-@if(have_rows('select_clients_bottom') && false)
 
-    @php
-    $clients_bg = get_theme_mod('hpf_client_slider_background_color'); 
-    $hpf_client_slider_headline_text = get_theme_mod('hpf_client_slider_headline_text');
-    @endphp
-
-    <section class="clients-section" style="background-color: {{ $clients_bg }}">
-        
-        <div class="container">
-            <div class="col-sm-12 client-slider">
-                <div class="owl-carousel-clients" @if( $title_border == '2' ) {{ 'style="border-top: 0px !important;";' }} @endif >
-                
-                    @foreach($select_clients_bottom as $client)
-                        <div class="item">
-                            <img src="{{$client->client_logo}}" style="padding-top: {{ $client->client_logo_padding_top }}; padding-bottom: {{ $client->client_logo_padding_bottom }};" />
-                        </div>
-                    @endforeach
-                
-                </div>
-
-            </div>
-        </div>
-    </section>
-    
-@endif
 </section>

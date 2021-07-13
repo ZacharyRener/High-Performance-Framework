@@ -14,11 +14,11 @@ import Guides from "./_guides";
 import SingleLeadership from "./_single-leadership";
 
 document.addEventListener("DOMContentLoaded", () => {
+  load("page", () => new Global());
   load("home", () => new Home());
   if (document.querySelector("#sticky-sections .navigation") != null) {
     load("page", () => new StickySections());
   }
-  load("page", () => new Global());
   load("single", () => new Global());
   load("page-template-template-projects", () => new Experience());
   load("single-project", () => new SingleProject());

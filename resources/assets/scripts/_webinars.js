@@ -11,7 +11,7 @@ export default class Webinars {
     ReactDOM.render(
       <WhitepaperFilters
         searchText="Search Webinars"
-        pageSlug="/resources/webinars"
+        pageSlug="/insights/webinars"
       />,
       document.querySelector("#wp-filter-root")
     );

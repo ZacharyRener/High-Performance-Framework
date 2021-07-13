@@ -31,7 +31,6 @@ if( !empty($hpf_client_slider_left_arrow ) ){
     $(document).ready(function () {
         setTimeout(()=>{
 $(".owl-carousel:not(.owl-carousel-clients)").owlCarousel({
-            transitionStyle: 'slide',
             loop: true,
             navigation: true,
             autoplay: true,
@@ -71,13 +70,13 @@ $(".owl-carousel:not(.owl-carousel-clients)").owlCarousel({
         clientSlider.owlCarousel({
             autoplay: true,
             autoPlaySpeed: 1500,
-            navigation: false,
+            navigation: true,
             slideSpeed: 300,
             paginationSpeed: 400,
             singleItem: false,
             loop: true,
-            dots: true,
-            pagination: true,
+            dots: false,
+            pagination: false,
             items: 4,
             touchDrag: false,
             mouseDrag: false,

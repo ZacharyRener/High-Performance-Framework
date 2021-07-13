@@ -11,7 +11,7 @@ export default class Guides {
     ReactDOM.render(
       <WhitepaperFilters
         searchText="Search Guides"
-        pageSlug="/resources/guides"
+        pageSlug="/insights/guides"
       />,
       document.querySelector("#wp-filter-root")
     );

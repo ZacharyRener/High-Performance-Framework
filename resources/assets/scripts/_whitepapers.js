@@ -9,7 +9,10 @@ export default class Whitepapers {
 
   loadFilters() {
     ReactDOM.render(
-      <WhitepaperFilters />,
+      <WhitepaperFilters 
+        searchText="Search Whitepapers"
+        pageSlug="/insights/whitepapers"
+        />,
       document.querySelector("#wp-filter-root")
     );
   }

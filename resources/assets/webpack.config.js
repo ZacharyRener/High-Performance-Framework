@@ -8,7 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "main.js",
   },
-  //devtool: "inline-source-map",
+  devtool: "inline-source-map",
   module: {
     rules: [
       {
@@ -65,7 +65,7 @@ module.exports = {
       {
         host: "localhost",
         port: 3000,
-        proxy: "davie.kaplan",
+        proxy: "starting.point",
         files: "../.",
       },
       {

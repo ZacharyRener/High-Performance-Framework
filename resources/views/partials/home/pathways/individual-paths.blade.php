@@ -17,11 +17,6 @@
             <a style="border-width: {{ $indbutton_border }}px !important; border-color: {{ $indbutton_border_color }} !important; {{$backgroundImage}}" href="{{ $indbutton_link }}">
                 <div class='gradient-overlay'></div>
                 <span>
-                    <div class='arrow-wrapper'>
-                        <div class='animating-arrow'>
-                            <img src='/wp-content/uploads/2021/06/orange-arrow.png'>
-                        </div>
-                    </div>
                     @if(!empty($pathway_icon)) 
                         {{ '<img src="'.$pathway_icon.'"><br />' }}
                     @endif

@@ -4,7 +4,7 @@
         
         {!! $child_pages !!}
             
-        @php dynamic_sidebar( 'default-sidebar' ); @endphp
+        {{ $default_sidebar }}
     
         @if(get_post_type() == "project")
             @include('partials.single.project-sidebar')

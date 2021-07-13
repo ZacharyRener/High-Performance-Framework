@@ -1,12 +1,10 @@
 @extends('layouts.app')
 
-@section('content')
-  @include('partials.page-header')
+@section('header')
+    @include('partials.subpage.header-image')
+@endsection
 
-  @if (!have_posts())
-    <div class="alert alert-warning">
-      {{ __('Sorry, but the page you were trying to view does not exist.', 'sage') }}
-    </div>
-    {!! get_search_form(false) !!}
-  @endif
+@section('content')
+    @include('partials.subpage.content')
+    @include('partials.subpage.sidebar')  
 @endsection

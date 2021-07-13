@@ -1,4 +1,25 @@
 .home-slider {
+    p {
+      margin-bottom: 50px !important;
+    }
+    .owl-controls.clickable {
+        position: absolute;
+        bottom: calc(15% + 100px);
+        width: 100%;
+    }
+
+    .owl-next {
+        float: right;
+        position: relative;
+        right: 30px;
+    }
+
+    .owl-prev {
+        float: left;
+        position: relative;
+        left: 30px;
+    }
+
   .slide-txt h2 {
     font-family: "Rubik", sans-serif;
     text-transform: uppercase;

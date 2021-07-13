@@ -29,9 +29,6 @@ body:not(.home) .content {
 body:not(.home) .main-container > section > .container > .row > .col-md-8.about-body {
   padding-bottom: 78px; }
 
-aside#secondary {
-  padding-bottom: 50px; }
-
 /* ============================================================== *
  * Utility Menu Colors                                            *
  * ============================================================== */
@@ -365,16 +362,6 @@ a.section-title-custom {
 .section:nth-last-child(1) {
   margin-bottom: 0 !important; }
 
-.top-level-nav-item:nth-child(2) > a {
-  padding-left: 0;
-  position: relative;
-  left: 30px;
-  top: 10px;
-  line-height: 21px; }
-
-.top-level-nav-item:nth-child(2) {
-  width: 227px; }
-
 .top-level-nav-item {
   padding-top: 20px !important; }
 
@@ -388,11 +375,7 @@ a.section-title-custom {
   .top-level-nav-item > a {
     font-size: 0.8rem !important; }
   .top-level-nav-item:nth-child(2) {
-    width: auto !important; }
-  .top-level-nav-item:nth-child(2) > a {
-    left: 10px !important;
-    top: 8px !important;
-    line-height: normal !important; } }
+    width: auto !important; } }
 
 @media (max-width: 992px) and (min-width: 768px) {
   #header #primary-nav .site-logo {
@@ -403,11 +386,7 @@ a.section-title-custom {
   .top-level-nav-item > a {
     font-size: 0.8rem !important; }
   .top-level-nav-item:nth-child(2) {
-    width: auto !important; }
-  .top-level-nav-item:nth-child(2) > a {
-    left: 10px !important;
-    top: auto !important;
-    line-height: normal !important; } }
+    width: auto !important; } }
 
 #header .top-level-nav-item > a {
   letter-spacing: normal !important; }
@@ -448,6 +427,24 @@ a.section-title-custom {
     display: block !important; }
   #menu-mobile-navigation > .menu-item-has-children > .sub-menu > .hidden {
     display: block !important; } }
+
+.home-slider p, .home-slider body:not(.home) .main-container .about-body li, body:not(.home) .main-container .about-body .home-slider li {
+  margin-bottom: 50px !important; }
+
+.home-slider .owl-controls.clickable {
+  position: absolute;
+  bottom: calc(15% + 100px);
+  width: 100%; }
+
+.home-slider .owl-next {
+  float: right;
+  position: relative;
+  right: 30px; }
+
+.home-slider .owl-prev {
+  float: left;
+  position: relative;
+  left: 30px; }
 
 .home-slider .slide-txt h2 {
   font-family: "Rubik", sans-serif;
@@ -911,12 +908,11 @@ section#industry-solutions {
     width: calc(100%) !important; } }
 
 section#home-offers {
-  background: #153355;
   padding-bottom: 125px;
   padding-top: 100px; }
   section#home-offers .team-box > a,
   section#home-offers .team-box > h5 a {
-    color: white;
+    color: black;
     font-family: "Rubik", sans-serif;
     text-transform: uppercase;
     font-weight: 500;
@@ -980,7 +976,7 @@ section#home-offers {
     margin-bottom: 40px;
     margin-top: 25px;
     display: block;
-    color: white; }
+    color: black; }
     section#home-offers .our-team-box span strong {
       display: block;
       margin-bottom: 10px; }
@@ -1005,7 +1001,8 @@ section#home-offers {
   section#home-offers span.datentime {
     font-size: 12px;
     margin-top: 0;
-    line-height: 7px; }
+    line-height: 7px;
+    color: white; }
   section#home-offers .our-team-box.blog-box {
     height: 100%; }
   @media (max-width: 1000px) and (min-width: 769px) {
@@ -1046,7 +1043,31 @@ section#home-offers {
     padding-left: 15px !important; } }
 
 .clients-section {
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  padding-top: 75px; }
+  .clients-section .owl-wrapper-outer img {
+    max-width: 100%;
+    padding: 0 40px; }
+  .clients-section .section-wrapper {
+    text-align: center;
+    margin-bottom: 50px; }
+  .clients-section .owl-buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%; }
+  .clients-section .owl-prev {
+    float: left; }
+    @media (min-width: 768px) {
+      .clients-section .owl-prev {
+        position: relative;
+        left: -30px; } }
+  .clients-section .owl-next {
+    float: right; }
+    @media (min-width: 768px) {
+      .clients-section .owl-next {
+        position: relative;
+        right: -30px; } }
   .clients-section .owl-wrapper-outer {
     margin-bottom: 30px; }
   .clients-section .owl-wrapper-outer img {
@@ -1084,7 +1105,7 @@ section#careers {
 section.body-section.seo-copy {
   background-image: url(/wp-content/uploads/2021/06/seo-copy-bg.png);
   padding-top: 88px;
-  padding-bottom: 60px;
+  padding-bottom: 88px;
   background-size: cover; }
   section.body-section.seo-copy h1 {
     font-family: "Rubik";
@@ -1300,6 +1321,10 @@ section.body-section.seo-copy {
     object-fit: contain; }
   #slickCarouselWrapper .ontainer.for-top-grid {
     top: 15px !important; }
+
+body.home .slide-img, body.home .slide-img img {
+  height: 100%;
+  object-fit: cover; }
 
 body:not(.home) .gform_wrapper {
   background: #e7e7e7;
@@ -2172,10 +2197,12 @@ body:not(.home) .main-container .about-body .page-template-template-blog .featur
     padding-right: 20px !important; } }
 
 .page-template-template-guides h3,
-.page-template-template-webinar h3 {
+.page-template-template-webinar h3,
+.page-template-template-whitepapers h3 {
   margin-top: 30px !important; }
   .page-template-template-guides h3 a,
-  .page-template-template-webinar h3 a {
+  .page-template-template-webinar h3 a,
+  .page-template-template-whitepapers h3 a {
     color: #272727;
     font-weight: 600;
     font-size: 28px;
@@ -2183,7 +2210,8 @@ body:not(.home) .main-container .about-body .page-template-template-blog .featur
     text-transform: none !important; }
 
 .page-template-template-guides .btn,
-.page-template-template-webinar .btn {
+.page-template-template-webinar .btn,
+.page-template-template-whitepapers .btn {
   font-family: "Rubik", sans-serif !important;
   text-transform: uppercase !important;
   font-size: 15px !important;
@@ -2192,18 +2220,21 @@ body:not(.home) .main-container .about-body .page-template-template-blog .featur
   border-radius: 50px !important;
   padding: 13px 35px !important; }
   .page-template-template-guides .btn:hover,
-  .page-template-template-webinar .btn:hover {
+  .page-template-template-webinar .btn:hover,
+  .page-template-template-whitepapers .btn:hover {
     background-color: #f06944 !important;
     text-decoration: none !important; }
 
 .page-template-template-guides .library-item,
-.page-template-template-webinar .library-item {
+.page-template-template-webinar .library-item,
+.page-template-template-whitepapers .library-item {
   align-items: flex-start;
   padding-bottom: 50px;
   position: relative;
   margin-bottom: 50px; }
   .page-template-template-guides .library-item::after,
-  .page-template-template-webinar .library-item::after {
+  .page-template-template-webinar .library-item::after,
+  .page-template-template-whitepapers .library-item::after {
     width: calc(100% - 15px);
     content: "";
     background: #e7e7e7;
@@ -2213,26 +2244,31 @@ body:not(.home) .main-container .about-body .page-template-template-blog .featur
     left: 15px; }
 
 .page-template-template-guides .image-spacer,
-.page-template-template-webinar .image-spacer {
+.page-template-template-webinar .image-spacer,
+.page-template-template-whitepapers .image-spacer {
   width: 100%;
   height: 100%;
   background: #e7e7e7; }
 
 @media (max-width: 768px) {
   .page-template-template-guides .col-md-8,
-  .page-template-template-webinar .col-md-8 {
+  .page-template-template-webinar .col-md-8,
+  .page-template-template-whitepapers .col-md-8 {
     margin-left: 15px !important; } }
 
 .page-template-template-guides .library-thumb img,
 .page-template-template-guides .library-thumb .image-spacer,
 .page-template-template-webinar .library-thumb img,
-.page-template-template-webinar .library-thumb .image-spacer {
+.page-template-template-webinar .library-thumb .image-spacer,
+.page-template-template-whitepapers .library-thumb img,
+.page-template-template-whitepapers .library-thumb .image-spacer {
   height: 180px;
   object-fit: cover;
   object-position: center; }
 
 .page-template-template-guides div#wp-filter-root,
-.page-template-template-webinar div#wp-filter-root {
+.page-template-template-webinar div#wp-filter-root,
+.page-template-template-whitepapers div#wp-filter-root {
   margin-top: 50px !important;
   margin-bottom: 60px !important; }
 

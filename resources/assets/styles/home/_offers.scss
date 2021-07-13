@@ -1,10 +1,9 @@
 section#home-offers {
-  background: #153355;
   padding-bottom: 125px;
   padding-top: 100px;
   .team-box > a,
   .team-box > h5 a {
-    color: white;
+    color: black;
     font-family: "Rubik", sans-serif;
     text-transform: uppercase;
     font-weight: 500;
@@ -91,7 +90,7 @@ section#home-offers {
     margin-bottom: 40px;
     margin-top: 25px;
     display: block;
-    color: white;
+    color: black;
     strong {
       display: block;
       margin-bottom: 10px;
@@ -118,6 +117,7 @@ section#home-offers {
     font-size: 12px;
     margin-top: 0;
     line-height: 7px;
+    color: white;
   }
   .our-team-box.blog-box {
     height: 100%;

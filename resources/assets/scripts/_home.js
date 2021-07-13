@@ -17,7 +17,11 @@ function isInViewport(element) {
 
 export default class Home {
   constructor() {
+    this.handleHiddenHover(".project");
+    this.handleHiddenHover(".solution");
     this.matchOfferHeights();
+    this.handleIndustryHover();
+    this.renderSlickCarousel();
   }
 
   renderSlickCarousel() {
@@ -29,8 +33,6 @@ export default class Home {
       slidesToShow: 1,
       slidesToScroll: 1,
       appendDots: jQuery(".dots-container"),
-      autoplay: true,
-      autoplaySpeed: 5000
     });
     jQuery("#slickCarouselWrapper .ontainer.for-dots").attr(
       "style",

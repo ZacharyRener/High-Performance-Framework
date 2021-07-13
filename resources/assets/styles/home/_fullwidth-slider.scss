@@ -2,6 +2,7 @@
   max-width: 100%;
   overflow: hidden;
   position: relative;
+  
   .slickCarousel {
     margin-bottom: 0;
   }
@@ -88,4 +89,11 @@
   .ontainer.for-top-grid {
     top: 15px !important;
   }
+}
+
+body.home {
+    .slide-img, .slide-img img {
+        height: 100%;
+        object-fit: cover;
+    }
 }
