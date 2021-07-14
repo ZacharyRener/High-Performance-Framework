@@ -1,11 +1,17 @@
 .home-slider-wrapper {
   margin-top: 35px;
+  @media (max-width: 768px) {
+    margin-top: 27px;
+  }
 }
 
 .home-slider {
   img.movingImg {
     width: 100%;
     object-position: top right;
+    @media (max-width: 768px) {
+      object-position: 70% 0;
+    }
   }
   p {
     margin-bottom: 50px !important;
@@ -42,9 +48,9 @@
   }
 
   .slide-txt h2 {
-    font-family: "Rubik", sans-serif;
+    font-family: "Bitter";
     text-transform: uppercase;
-    font-size: 53px;
+    font-size: 60px;
     font-weight: 400;
     @media (max-width: 768px) {
       font-size: 48px;
@@ -63,9 +69,9 @@
 
   .slide-txt h2 {
     text-transform: none;
-    font-weight: 600;
-    color: #153355;
-    margin-bottom: 40px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 20px;
   }
 }
 
@@ -73,6 +79,18 @@
   .slide-txt {
     position: absolute;
     bottom: 15%;
+    margin-left: 100px;
+    @media (max-width: 992px) {
+      margin-left: 0;
+    }
+    @media (min-width: 768px) {
+      max-width: 70%;
+    }
+    p {
+      color: white;
+      font-family: "Bitter";
+      font-size: 24px;
+    }
     @include phone {
       top: 50%;
       transform: translateY(-50%);
