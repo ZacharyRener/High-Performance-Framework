@@ -9,8 +9,8 @@
     <section class="clients-section" style="background-color: {{ $clients_bg }}">
         <div class="section-wrapper">
             <p class="section-header">
-                @if( !empty($hpf_client_slider_headline_text ) ) 
-                    {{ $hpf_client_slider_headline_text }}
+                @if( !empty($clients_title ) ) 
+                    {{ $clients_title }}
                 @else 
                     {{ "Select Clients" }}
                 @endif
