@@ -1,4 +1,8 @@
 .home-slider {
+  img.movingImg {
+    width: 100%;
+    object-position: center;
+  }
   p {
     margin-bottom: 50px !important;
   }
