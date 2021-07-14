@@ -1,17 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500;600;700&display=swap");
 
 @mixin button {
-  font-family: "Rubik", sans-serif !important;
+  font-family: "Open Sans" !important;
   text-transform: uppercase !important;
-  font-size: 15px !important;
-  color: white !important;
-  background-color: #fbc84d !important;
+  font-size: 16px !important;
+  color: #003a5c !important;
+  font-weight: 600;
+  transition: $transition;
+  background: rgb(0, 184, 237);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 184, 237, 1) 0%,
+    rgba(0, 255, 254, 1) 100%
+  ) !important;
+  letter-spacing: 1.7zpx;
   &:hover {
-    background-color: #f06944 !important;
     text-decoration: none !important;
   }
-  border-radius: 50px !important;
-  padding: 13px 35px !important;
+  border-radius: 10px !important;
+  padding: 13px 44px !important;
 }
 
 $transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
