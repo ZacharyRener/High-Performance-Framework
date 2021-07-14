@@ -736,6 +736,15 @@ body:not(.home) {
   }
 }
 
+.page-template-template-library,
+.page-template-template-blog {
+  .fpo-img.pull-left {
+    @media (min-width: 769px) {
+      width: 30%;
+    }
+  }
+}
+
 .page-template-template-guides,
 .page-template-template-webinar,
 .page-template-template-whitepapers {
@@ -975,4 +984,13 @@ button:focus {
 
 .footer-row-two a:hover {
   color: white !important;
+}
+
+body:not(.home) {
+  @media (max-width: 576px) {
+    .col-md-3.col-sm-4 {
+      margin-top: -60px;
+      padding-bottom: 50px;
+    }
+  }
 }

@@ -268,10 +268,15 @@ nav#primary {
         right: 0;
       }
       ul {
+        &.children {
+          a {
+            opacity: 0.3;
+          }
+        }
         list-style: none;
         &:not(.sub-menu) {
           width: 100%;
-          padding-right: 75px;
+          padding-right: 0px;
           li {
             margin: 15px 0;
           }
@@ -441,7 +446,6 @@ a.section-title-custom {
   margin-bottom: 0 !important;
 }
 
-
 .top-level-nav-item {
   padding-top: 20px !important;
 }
@@ -531,5 +535,12 @@ a.section-title-custom {
   }
   #menu-mobile-navigation > .menu-item-has-children > .sub-menu > .hidden {
     display: block !important;
+  }
+  #header #primary-nav .site-logo {
+    max-width: 150px !important;
+    object-fit: contain;
+  }
+  nav#socials {
+    padding: 0 !important;
   }
 }
