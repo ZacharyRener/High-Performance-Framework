@@ -34,7 +34,7 @@ $primary__sub-menu__background-hover: #00a2c8;
 $mobile-menu__background: black;
 $mobile-menu__nav__color-static: white;
 $mobile-menu__nav__color-hover: white;
-$mobile-menu__nav__font: $mainFont;
+$mobile-menu__nav__font: "Open Sans";
 $mobile-menu__nav__font-size: inherit;
 $mobile-menu__nav__font-weight: normal;
 $mobile-menu__nav__text-transform: none;
@@ -319,7 +319,11 @@ nav#primary {
 .top-level-nav-item {
   position: relative;
 }
-
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+  background-color: white !important;
+}
 .top-level-nav-item > a {
   padding: 0 20px;
   padding-bottom: 15px;
@@ -418,7 +422,7 @@ nav#primary {
   }
 
   section#mobile-menu {
-    background: #494949 !important;
+    background: #003a5c !important;
   }
 }
 
