@@ -3,10 +3,11 @@
 
         <div class="col-sm-12 row b-t-p-section">
 
+            @php $counter = 0; @endphp
+
             @foreach($offers_select as $offer)
 
                 @php 
-                $counter = '0';
                 $offer_id = $offer->offer;
                 $offer_style = $offer->offer_style;
                 $offer_alignment = $offer->offer_alignment;
