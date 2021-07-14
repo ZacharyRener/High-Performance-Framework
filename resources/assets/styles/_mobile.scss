@@ -401,3 +401,17 @@
     width: 40%;
   }
 }
+
+.home-slider {
+  .slide-img {
+    z-index: 1;
+  }
+
+  .container {
+    z-index: 2;
+  }
+
+  .slide-img::after {
+    display: none;
+  }
+}
