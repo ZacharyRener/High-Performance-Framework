@@ -26,6 +26,9 @@ footer > .container {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.8px;
+  &:hover {
+    color: #003a5c !important;
+  }
 }
 
 footer.content-info {
