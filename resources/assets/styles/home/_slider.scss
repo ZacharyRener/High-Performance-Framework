@@ -6,6 +6,12 @@
 }
 
 .home-slider {
+  .owl-prev,
+  .owl-next {
+    background: none !important;
+    font-size: 30px !important;
+    border-radius: 0 !important;
+  }
   img.movingImg {
     width: 100%;
     object-position: top right;
@@ -18,7 +24,7 @@
   }
   .owl-controls {
     position: absolute;
-    bottom: calc(15% + 100px);
+    bottom: calc(15% + 175px);
     width: 100%;
     @media (max-width: 768px) {
       bottom: 60px;
@@ -57,7 +63,7 @@
       font-weight: 300;
     }
     letter-spacing: 0.025em;
-    max-width: 60%;
+    max-width: 80%;
     @media (max-width: 994px) {
       max-width: 75% !important;
     }
