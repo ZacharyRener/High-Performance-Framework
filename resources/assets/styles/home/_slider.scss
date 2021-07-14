@@ -1,4 +1,12 @@
+.home-slider-wrapper {
+  margin-top: 35px;
+}
+
 .home-slider {
+  img.movingImg {
+    width: 100%;
+    object-position: top right;
+  }
   p {
     margin-bottom: 50px !important;
   }
