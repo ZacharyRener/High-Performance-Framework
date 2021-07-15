@@ -13,12 +13,18 @@
     rgba(0, 184, 237, 1) 0%,
     rgba(0, 255, 254, 1) 100%
   ) !important;
-  letter-spacing: 1.7zpx;
+  letter-spacing: 1.7px;
   &:hover {
     text-decoration: none !important;
   }
   border-radius: 10px !important;
   padding: 13px 44px !important;
+}
+
+@mixin small-button {
+  font-size: 12px !important;
+  letter-spacing: 1.5px !important;
+  padding: 10px 30px !important;
 }
 
 $transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
