@@ -1,5 +1,5 @@
 .pathways {
-  margin-bottom: 125px;
+  margin-bottom: 75px;
   hr {
     margin-bottom: 50px;
     border-width: 2px;
@@ -14,7 +14,8 @@
   }
   .a-button {
     padding: 0;
-    height: 252px;
+    height: auto;
+
     @media (max-width: 991px) {
       margin-bottom: 30px;
     }
@@ -23,17 +24,37 @@
       @media (max-width: 575px) {
         margin-right: 0;
       }
+
       > a {
+        transition: $transition;
+        background-position: center !important;
+        box-shadow: 0px 17px 10px -2px #e1e1d3;
+        border-radius: 100%;
         border: 1px solid #e7e7e7 !important;
-        height: 100%;
-        display: flex;
-        align-items: flex-end;
-        padding-bottom: 30px;
-        padding-left: 50px;
-        padding-right: 50px;
-        @media (max-width: 1200px) {
-          padding-left: 20px;
+        &:hover {
+          border: 1px solid white !important;
         }
+        height: 340px;
+        padding: 0 10px;
+        @media (max-width: 1200px) and (min-width: 993px) {
+          height: 280px;
+        }
+        @media (max-width: 992px) {
+          height: 200px;
+        }
+        @media (max-width: 768px) {
+          height: 217.5px;
+        }
+        @media (max-width: 575px) {
+          width: 80vw;
+          height: 80vw;
+        }
+        margin: 0 auto;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        line-height: 50px;
         transition: $transition;
         position: relative;
         &:hover {
@@ -42,13 +63,15 @@
         span {
           z-index: 2;
           .content {
-            font-family: "Rubik", sans-serif;
-            font-size: 32px;
-            color: #153355;
-            font-weight: 600;
-            line-height: 35px;
-            min-height: 70px;
+            font-family: "Bitter";
+            font-size: 38px;
+            @media (max-width: 1200px) {
+              font-size: 32px;
+            }
+            color: white;
+            font-weight: 400;
             z-index: 2;
+            line-height: 40px;
             @media (max-width: 991px) {
               font-size: 18px;
               line-height: 23px;
@@ -57,27 +80,6 @@
         }
       }
     }
-  }
-  .gradient-overlay {
-    background: linear-gradient(
-      19deg,
-      rgba(244, 244, 244, 1) 0%,
-      rgba(255, 255, 255, 1) 23%,
-      rgba(255, 255, 255, 1) 31%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-    z-index: 0;
-    background-repeat: no-repeat;
-    background-size: 100% 300px;
-    &:hover {
-      background-position-y: -48px;
-    }
-    transition: $transition;
   }
 
   .animating-arrow {
@@ -130,4 +132,8 @@
   .pathways .a-button:nth-child(3) {
     padding-left: 15px;
   }
+}
+
+body.home {
+  background-color: #f6f6ed;
 }
