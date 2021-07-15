@@ -1,0 +1,124 @@
+.home-slider-wrapper {
+  margin-top: 35px;
+  @media (max-width: 768px) {
+    margin-top: 27px;
+  }
+}
+
+.home-slider {
+  .owl-prev,
+  .owl-next {
+    background: none !important;
+    font-size: 30px !important;
+    border-radius: 0 !important;
+  }
+  img.movingImg {
+    width: 100%;
+    object-position: top right;
+    @media (max-width: 768px) {
+      object-position: 70% 0;
+    }
+  }
+  p {
+    margin-bottom: 50px !important;
+  }
+  .owl-controls {
+    position: absolute;
+    bottom: calc(15% + 175px);
+    width: 100%;
+    @media (max-width: 768px) {
+      bottom: 60px;
+    }
+  }
+
+  .owl-next {
+    @media (min-width: 769px) {
+      float: right;
+      position: relative;
+      right: 10px;
+    }
+  }
+
+  .slide-txt {
+    @media (min-width: 769px) {
+      padding-right: 20%;
+    }
+  }
+
+  .owl-prev {
+    @media (min-width: 769px) {
+      float: left;
+      position: relative;
+      left: 10px;
+    }
+  }
+
+  .slide-txt h2 {
+    font-family: "Bitter";
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: 400;
+    @media (max-width: 768px) {
+      font-size: 48px;
+      font-weight: 300;
+    }
+    letter-spacing: 0.025em;
+    max-width: 80%;
+    @media (max-width: 994px) {
+      max-width: 75% !important;
+    }
+    @media (max-width: 768px) {
+      max-width: 100% !important;
+    }
+    color: black;
+  }
+
+  .slide-txt h2 {
+    text-transform: none;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 20px;
+  }
+}
+
+.home {
+  .slide-txt {
+    position: absolute;
+    bottom: 15%;
+    margin-left: 100px;
+    @media (max-width: 992px) {
+      margin-left: 0;
+    }
+    @media (min-width: 768px) {
+      max-width: 70%;
+    }
+    p {
+      color: white;
+      font-family: "Bitter";
+      font-size: 24px;
+    }
+    @include phone {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    a {
+      @include button;
+    }
+  }
+
+  .home-slider .owl-slide,
+  .home-slider {
+    max-height: 100vh;
+    min-height: 700px;
+  }
+
+  .content {
+    padding-top: 0 !important;
+  }
+
+  .slide-vid video,
+  .slide-vid source {
+    width: 100%;
+    object-fit: cover;
+  }
+}
