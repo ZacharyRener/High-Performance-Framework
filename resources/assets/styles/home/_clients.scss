@@ -9,7 +9,22 @@
 
   .section-wrapper {
     text-align: center;
+    margin: 0 auto;
     margin-bottom: 50px;
+    max-width: 70%;
+  }
+
+  .section-header {
+    font-size: 32px;
+    color: #003a5c;
+    font-family: "Bitter";
+  }
+
+  .owl-prev,
+  .owl-next {
+    background: none !important;
+    color: #cacab4 !important;
+    font-size: 25px !important;
   }
 
   .owl-buttons {
