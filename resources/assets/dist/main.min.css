@@ -1728,9 +1728,11 @@ body:not(.home) .main-container {
   body:not(.home) .main-container .wp-block-column > h6:nth-child(1) {
     margin-top: 0; }
   body:not(.home) .main-container hr {
-    margin: 50px 0;
-    margin-bottom: 60px;
-    border-top: 2px solid #e7e7e7; }
+    margin: 30px 0;
+    margin-bottom: 50px;
+    border-top: 2px solid #cdcdbf !important;
+    border-bottom: none !important;
+    margin-top: 0 !important; }
   body:not(.home) .main-container .about-body ul {
     list-style-position: inside; }
   body:not(.home) .main-container .about-body li {
@@ -1746,8 +1748,7 @@ body:not(.home) blockquote {
     color: #016dad !important;
     margin-bottom: 40px;
     font-family: "Bitter" !important;
-    font-size: 24px !important;
-    line-height: normal !important; }
+    font-size: 24px !important; }
   body:not(.home) blockquote cite {
     color: #003a5c !important;
     font-size: 14px;
@@ -2748,6 +2749,29 @@ button:focus {
   body:not(.home) .col-md-3.col-sm-4 {
     margin-top: -60px;
     padding-bottom: 50px; } }
+
+body:not(.home) .wp-block-image.is-style-rounded {
+  width: 50%;
+  display: flex;
+  float: right;
+  margin: 0 auto !important;
+  justify-content: center;
+  align-items: center;
+  height: auto; }
+
+body:not(.home) .is-style-rounded img {
+  width: 262px;
+  height: 262px;
+  object-fit: cover;
+  object-position: center;
+  border: 13px solid #cdcdbf;
+  transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+  box-shadow: 0px 17px 10px -2px #e1e1d3;
+  border-radius: 100%;
+  border: 13px solid #cdcdbf !important; }
+
+body:not(.home) .sidebar-offer p, body:not(.home) .sidebar-offer .main-container .about-body li, body:not(.home) .main-container .about-body .sidebar-offer li {
+  line-height: 23px; }
 
 .sections {
   display: flex; }
