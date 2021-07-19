@@ -65,7 +65,7 @@ module.exports = {
       {
         host: "localhost",
         port: 3000,
-        proxy: "starting.point",
+        proxy: "carl-elefante.hpf",
         files: "../.",
       },
       {
