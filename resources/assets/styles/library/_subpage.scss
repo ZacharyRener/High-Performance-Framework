@@ -303,9 +303,11 @@ body:not(.home) {
       margin-top: 0;
     }
     hr {
-      margin: 50px 0;
-      margin-bottom: 60px;
-      border-top: 2px solid #e7e7e7;
+      margin: 30px 0;
+      margin-bottom: 50px;
+      border-top: 2px solid #cdcdbf !important;
+      border-bottom: none !important;
+      margin-top: 0 !important;
     }
     .about-body {
       ul {
@@ -328,7 +330,6 @@ body:not(.home) {
       margin-bottom: 40px;
       font-family: "Bitter" !important;
       font-size: 24px !important;
-      line-height: normal !important;
     }
     cite {
       color: #003a5c !important;
@@ -1070,5 +1071,29 @@ body:not(.home) {
       margin-top: -60px;
       padding-bottom: 50px;
     }
+  }
+  .wp-block-image.is-style-rounded {
+    width: 50%;
+    display: flex;
+    float: right;
+    margin: 0 auto !important;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .is-style-rounded img {
+    width: 262px;
+    height: 262px;
+    object-fit: cover;
+    object-position: center;
+    border: 13px solid #cdcdbf;
+    transition: $transition;
+    box-shadow: 0px 17px 10px -2px #e1e1d3;
+    border-radius: 100%;
+    border: 13px solid #cdcdbf !important;
+  }
+  .sidebar-offer p {
+    line-height: 23px;
   }
 }
