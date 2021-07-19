@@ -29,29 +29,45 @@
                                             $section_title = get_sub_field('section_title');
                                             $section_link = get_sub_field('section_link');
                                             $enable_sub_menu = get_sub_field('enable_sub_menu');
+                                            $enable_quote_section = get_sub_field('enable_quote_section');
+                                            $quote_title = get_sub_field('quote_title');
+                                            $quote_excerpt = get_sub_field('quote_excerpt');
+                                            $quote_button_text = get_sub_field('quote_button_text');
+                                            $quote_button_url = get_sub_field('quote_button_url');
                                             @endphp
 
                                             <div class='section'>
 
-                                                <a class='section-title-custom' href='{{$section_link}}'>{{$section_title}}</a>
-                                                @if($enable_sub_menu)
-                                                <div class='sub-menu'>
-                                                    @if(have_rows('sub_menu'))
-                                                        @while(have_rows('sub_menu'))
-                                                            @php the_row(); @endphp
+                                                @if($enable_quote_section)
 
-                                                            @php
-                                                            $page_title = get_sub_field('page_title');
-                                                            $page_link = get_sub_field('page_link');
-                                                            @endphp
+                                                    <div class='sub-section with-quote'>
+                                                        <p class='quote'>{{$quote_title}}</p>
+                                                        <p class='excerpt'>{{$quote_excerpt}}</p>
+                                                        <a class='button' href='{{$quote_button_url}}'>{{$quote_button_text}}</a>
+                                                    </div>
 
-                                                            <a class='sub-menu-link' href='{{$page_link}}'>{{$page_title}}</a>
+                                                @else
 
-                                                        @endwhile
+                                                    <a class='section-title-custom' href='{{$section_link}}'>{{$section_title}}</a>
+                                                    @if($enable_sub_menu)
+                                                        <div class='sub-menu'>
+                                                            @if(have_rows('sub_menu'))
+                                                                @while(have_rows('sub_menu'))
+                                                                    @php the_row(); @endphp
+
+                                                                    @php
+                                                                    $page_title = get_sub_field('page_title');
+                                                                    $page_link = get_sub_field('page_link');
+                                                                    @endphp
+
+                                                                    <a class='sub-menu-link' href='{{$page_link}}'>{{$page_title}}</a>
+
+                                                                @endwhile
+                                                            @endif
+                                                        </div>
                                                     @endif
-                                                </div>
-                                                @endif
 
+                                                @endif
                                             </div>
 
                                         @endwhile

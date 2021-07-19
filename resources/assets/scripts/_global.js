@@ -2,6 +2,7 @@ export default class Global {
   constructor() {
     this.handleTrayMenu();
     this.handleLeftNavHover();
+    this.carlElefanteCustomizations();
     //if (window.innerWidth > 768) this.makeOffersSticky();
   }
 
@@ -105,5 +106,69 @@ export default class Global {
         }
       });
     }
+  }
+
+  carlElefanteCustomizations() {
+    document
+      .querySelectorAll(
+        ".dropdown-menu-custom > .column:nth-child(2) > .section"
+      )
+      .forEach((e) => {
+        e.classList.add("hidden");
+      });
+
+    document
+      .querySelectorAll(
+        ".dropdown-menu-custom > .column:nth-child(1) > .section"
+      )
+      .forEach((e) => {
+        let childCount = -1;
+        e.addEventListener("mouseenter", (el) => {
+          const hoveredElement = el.toElement;
+
+          for (
+            let i = 0;
+            i < hoveredElement.parentElement.children.length;
+            i++
+          ) {
+            const child = hoveredElement.parentElement.children[i];
+            if (child === hoveredElement) {
+              childCount = i + 1;
+              console.log("childCount:", childCount);
+            }
+          }
+          const correspondingColumn = document.querySelector(
+            `.dropdown-menu-custom > .column:nth-child(2) > .section:nth-child(${childCount})`
+          );
+          console.log(
+            `.dropdown-menu-custom > .column:nth-child(2) > .section:nth-child(${childCount})`
+          );
+          correspondingColumn.classList.remove("hidden");
+        });
+
+        e.addEventListener("mouseleave", (el) => {
+          const correspondingColumn = document.querySelector(
+            `.dropdown-menu-custom > .column:nth-child(2) > .section:nth-child(${childCount})`
+          );
+          console.log(
+            `.dropdown-menu-custom > .column:nth-child(2) > .section:nth-child(${childCount})`
+          );
+          if (
+            document.querySelector(
+              `.dropdown-menu-custom > .column:nth-child(2) > .section:nth-child(${childCount}):hover`
+            ) != null
+          ) {
+            document
+              .querySelector(
+                `.dropdown-menu-custom > .column:nth-child(2) > .section:nth-child(${childCount}):hover`
+              )
+              .addEventListener("mouseleave", (tmp) => {
+                correspondingColumn.classList.add("hidden");
+              });
+          } else {
+            correspondingColumn.classList.add("hidden");
+          }
+        });
+      });
   }
 }

@@ -15,7 +15,7 @@ $utility__search__color: white;
 /* ============================================================== *
    * Primary Navigation Colors                                      *
    * ============================================================== */
-$primary__background: rgba(255, 255, 255, 0.9);
+$primary__background: rgba(255, 255, 255, 0.95);
 $primary__nav__color-hover: #3d3d3d;
 $primary__nav__color-static: #3d3d3d;
 $primary__nav__font: $mainFont;
@@ -42,8 +42,15 @@ $mobile-menu__nav__text-transform: none;
 
 nav#primary {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
+  .column {
+    margin-right: 0 !important;
+  }
+
+  .column:nth-child(2) .section {
+    height: 100%;
+  }
 }
 
 #right-side form {
@@ -160,7 +167,8 @@ nav#primary {
         max-width: 50%;
       }
       object-fit: contain;
-      height: 45px;
+      height: 41px;
+      width: 211px;
     }
     #primary {
       @include phone {
