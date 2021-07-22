@@ -18,7 +18,7 @@
   }
 
   .media-box-title.searchtitle {
-    color: #272727;
+    color: #003a5c;
     font-size: 18px;
   }
 
@@ -28,9 +28,12 @@
     margin-top: 5px;
   }
   .media-box-text {
-    font-family: "Rubik", sans-serif;
+    font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
-    color: #606060;
+    color: #016dad !important;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    margin-top: 8px !important;
   }
 
   .media-box-content a {
@@ -147,20 +150,21 @@
 }
 
 .single-leadership {
-  h2.leader-name {
-    color: #000000;
-    font-size: 40px !important;
-    text-transform: uppercase;
-    font-family: "Rubik", sans-serif;
-    letter-spacing: 1px;
+  h1.leader-name {
+    color: #003a5c;
+    font-size: 50px !important;
+    font-family: "Bitter", sans-serif;
+    margin-bottom: 10px !important;
   }
 
   .leader-title {
-    font-family: "Rubik", sans-serif;
-    letter-spacing: 1px;
+    font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
-    color: #6d6d6d;
-    font-weight: 500;
+    color: #016dad !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    letter-spacing: 1.1px;
+    margin-bottom: 40px !important;
   }
 
   img.single-leader {
@@ -263,7 +267,7 @@
   .person-contact {
     padding: 10px 60px !important;
     padding-right: 0 !important;
-    padding-bottom: 100px !important;
+    padding-bottom: 30px !important;
   }
 
   ul.social-share {
@@ -271,10 +275,11 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
+    padding-left: 0;
   }
 
   .social-share li a {
-    background: #33a6ef;
+    background: #016dad;
     color: white;
     width: 100%;
     height: 100%;
@@ -312,5 +317,30 @@
     section#fun-facts {
       margin-top: 0 !important;
     }
+  }
+}
+
+body.single-leadership {
+  .card {
+    &,
+    .card-header {
+      background: transparent;
+      border-radius: 0;
+      border: none;
+      padding: 0;
+    }
+    ul {
+      padding-left: 0;
+      list-style-position: inside;
+    }
+    h5 a {
+      color: #003a5c;
+      font-size: 20px !important;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+    }
+  }
+  .col-md-12.accordion-wrapper {
+    padding-left: 0;
   }
 }
