@@ -114,7 +114,7 @@ div#grid {
   font-size: 12px !important;
 }
 aside li a.active {
-  color: #fbc84d !important;
+  color: #016dad !important;
 }
 
 aside li a:hover {
@@ -396,31 +396,30 @@ body:not(.home) {
 .page-template-template-library,
 .page-template-template-blog {
   .featured-content-wrapper.sidebar-box {
-    background: #153355;
+    background: #e2e2d3;
     padding: 50px;
+    padding-top: 30px !important;
+    border-top: 11px solid #003a5c;
     padding-bottom: 65px;
-    padding-top: 35px;
     margin-bottom: 50px;
   }
 
   h5.ftr-content-title {
     margin: 0 auto !important;
-    font-size: 15px !important;
-    color: white !important;
+    font-size: 16px !important;
+    color: #003a5c !important;
     text-transform: uppercase;
     letter-spacing: 1.2px;
     font-weight: 500;
     margin-bottom: 20px !important;
-    font-family: "Rubik", sans-serif;
+    font-family: "Bitter", sans-serif;
   }
 
   .featured-content p strong {
     margin: 0 auto !important;
     font-size: 22px !important;
-    color: white !important;
     text-transform: none;
     letter-spacing: normal;
-    font-weight: 600 !important;
     margin-bottom: 0px !important;
   }
 
@@ -466,29 +465,34 @@ body:not(.home) {
   }
   .library-category > h5 {
     text-transform: uppercase;
-    font-size: 14px !important;
+    font-size: 16px !important;
     letter-spacing: 1.3px;
+    color: #003a5c !important;
+    font-weight: 700 !important;
+    margin-bottom: 20px !important;
   }
   .library-category img {
     margin-bottom: 15px;
   }
   h3.item-title-tag {
-    font-size: 16px !important;
+    font-size: 18px !important;
     text-transform: none !important;
-    font-family: "Rubik", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 600 !important;
     color: #272727 !important;
     &:hover {
-      color: #f06944 !important;
+      color: #016dad !important;
     }
     margin-top: 0 !important;
     margin-bottom: 10px !important;
   }
   .see-all-link a {
-    color: #f06944 !important;
+    color: #00b8ed !important;
     text-transform: uppercase;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 300;
+    font-family: "Open Sans";
+    letter-spacing: 1.2px;
   }
 
   .see-all-link {
@@ -499,7 +503,7 @@ body:not(.home) {
   }
 
   .library-category {
-    height: 483px;
+    height: 585px;
     padding-bottom: 55px;
     border-bottom: 2px solid #e7e7e7;
     margin-bottom: 50px;
@@ -510,7 +514,13 @@ body:not(.home) {
   }
 }
 
-.page-template-template-blog {
+.media-boxes-search,
+.media-boxes-drop-down {
+  background: white;
+}
+
+.page-template-template-blog,
+.page-template-template-library {
   .featured-content-wrapper.sidebar-box {
     min-height: 310px;
   }
@@ -533,11 +543,26 @@ body:not(.home) {
       margin-top: 40px;
     }
     h4 {
-      color: white !important;
+      color: #003a5c !important;
       margin-bottom: 30px;
+      text-transform: none !important;
+      letter-spacing: normal !important;
+      font-size: 20px !important;
+    }
+    .excerpt {
+      color: black !important;
+      margin-top: 25px !important;
+      font-weight: 400 !important;
+      font-size: 16px !important;
+      margin-bottom: 10px !important;
     }
     .button {
       @include button;
+      @include small-button;
+      @include blue-button;
+
+      padding-left: 40px !important;
+      padding-right: 40px !important;
     }
     .fpo-img.pull-left img {
       height: 185px !important;
@@ -551,7 +576,7 @@ body:not(.home) {
     .f-c-title h4,
     .button {
       position: relative;
-      top: 35px;
+      top: 20px;
     }
   }
   @media (max-width: 992px) {
@@ -611,24 +636,26 @@ body:not(.home) {
 
   .date {
     color: #272727;
-    font-weight: 400;
+    font-weight: 600;
   }
 
   .post a {
-    color: #272727 !important;
-    font-weight: 400;
-    font-weight: 600;
-    font-size: 17px;
+    color: #003a5c !important;
+    font-weight: 700 !important;
+    font-size: 18px;
     line-height: 21px;
+    font-family: "Open Sans", sans-serif;
   }
 
   .excerpt {
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 14px !important;
+    color: #016dad !important;
+    font-family: "Open Sans" !important;
   }
 
   .post-footer {
-    margin-bottom: 7px;
+    margin-bottom: 0px;
   }
 
   .imageSpacer {
@@ -738,6 +765,8 @@ body:not(.home) {
   font-size: 15px !important;
   letter-spacing: 1.1px;
   margin-top: 100px !important;
+  color: #003a5c !important;
+  margin-bottom: 15px !important;
 }
 
 .page-template-template-whitepapers,
@@ -803,8 +832,28 @@ body:not(.home) {
 .page-template-template-blog {
   .fpo-img.pull-left {
     @media (min-width: 769px) {
-      width: 30%;
+      width: 40%;
     }
+  }
+}
+
+.page-template-template-library {
+  h5.ftr-content-title {
+    left: auto !important;
+  }
+  .featured-content strong {
+    color: #003a5c !important;
+    margin-bottom: 30px;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    font-size: 20px !important;
+  }
+  .featured-content p {
+    color: black !important;
+    margin-top: 25px !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    margin-bottom: 10px !important;
   }
 }
 
@@ -946,15 +995,20 @@ body:not(.home) {
   .btn {
     @include button;
   }
+  h1 {
+    margin-bottom: 10px !important;
+  }
   .size-post-thumbnail {
     float: right;
     margin-left: 41px;
     margin-bottom: 50px;
+    max-width: 40%;
+    margin-top: 20px;
   }
   .author {
-    color: #494949 !important;
-    font-size: 24px !important;
-    font-weight: 400 !important;
+    color: #016dad !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
     margin-bottom: 30px !important;
     .divider {
       margin: 0 20px;
@@ -969,6 +1023,10 @@ body:not(.home) {
   }
   .share {
     margin-top: 70px !important;
+    font-family: "Open Sans";
+    display: block;
+    border-top: 2px solid #e7e7e7;
+    padding-top: 65px;
   }
   .a2a_svg {
     background-color: #818c8d !important;
@@ -1096,5 +1154,25 @@ body:not(.home) {
   }
   .sidebar-offer p {
     line-height: 23px;
+  }
+}
+
+.page-template-template-library {
+  .f-c-title h4 {
+    display: none !important;
+  }
+  .featured-content p {
+    margin-top: 10px !important;
+    margin-bottom: 0 !important;
+  }
+  .fpo-img.pull-left {
+    margin-top: 0 !important;
+  }
+
+  h5.ftr-content-title {
+    position: static !important;
+  }
+  article {
+    background: transparent !important;
   }
 }

@@ -24,9 +24,23 @@
 @mixin small-button {
   font-size: 12px !important;
   letter-spacing: 1.5px !important;
+  padding: 6px 30px !important;
+}
+@mixin blue-button {
+  background: #003a5c !important;
+  color: #1ae5dd !important;
   padding: 10px 30px !important;
 }
-
+#gform_Wrapper_1 {
+  background-color: #e3e3d4;
+  .button {
+    @include small-button;
+    letter-spacing: 2px !important;
+    font-size: 13px !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+}
 $transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
 
 @mixin searchbar {
@@ -37,14 +51,14 @@ $transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
   input {
     &,
     &::placeholder {
-      font-family: "Rubik", sans-serif;
-      font-weight: 400 !important;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 600 !important;
       font-size: 14px !important;
       color: #272727 !important;
     }
   }
   .media-boxes-icon {
-    background: #33a6ef;
+    background: #003a5c;
     position: absolute;
     right: 0px;
     top: 0;
@@ -52,7 +66,7 @@ $transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
     width: 37px;
     &,
     &::before {
-      color: white !important;
+      color: #1ae6dd !important;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -69,13 +83,13 @@ $transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
   padding-left: 3px;
   .media-boxes-drop-down-header,
   .filters li a {
-    font-family: "Rubik", sans-serif;
-    font-weight: 400 !important;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600 !important;
     font-size: 14px !important;
     color: #272727 !important;
   }
   .fa-sort-down {
-    background: #33a6ef;
+    background: #003a5c;
     position: absolute;
     right: -4px;
     top: 0;
@@ -83,7 +97,7 @@ $transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
     width: 37px;
     &,
     &::before {
-      color: white !important;
+      color: #1ae6dd !important;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -107,7 +121,7 @@ $transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
 
 @mixin form {
   .gform_wrapper {
-    background: #e7e7e7;
+    background: #e3e3d4;
     padding: 40px 35px;
   }
 
@@ -119,16 +133,17 @@ $transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
     padding: 0 !important;
     margin: 0 !important;
     input[type="text"],
+    input[type="email"],
     textarea {
-      border: 2px solid #d9d9d9 !important;
+      border: 1px solid #cdcdbf !important;
       padding-left: 15px;
-      border-radius: 2px;
+      border-radius: 0px;
       &,
       &::placeholder {
-        font-family: "Rubik", sans-serif;
+        font-family: "Open Sans", sans-serif;
         font-weight: 400 !important;
         font-size: 14px !important;
-        color: #272727 !important;
+        color: black !important;
       }
     }
     input[type="submit"] {

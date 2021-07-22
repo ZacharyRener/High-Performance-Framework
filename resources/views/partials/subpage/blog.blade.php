@@ -35,6 +35,7 @@
             $title = get_the_title();
             $date = get_the_date();
             $url = get_the_permalink();
+            $excerpt = App::getSnippet(get_the_excerpt(), 15) . '...';
             @endphp
 
         @endwhile
@@ -51,8 +52,9 @@
                     <img src="{{ $imageUrl }}" style="margin-bottom: 30px;">
                 </div>
                 <div class="f-c-title">
-                    <h5 class="ftr-content-title">Featured Article</h5>
+                    <h5 class="ftr-content-title">Featured Content</h5>
                     <h4>{{ $title }}</h4>
+                    <p class='excerpt'>{!! $excerpt !!}</p>
                 </div>
                 <p style='display:none;'>{{ $date }}</p>
                 <a href="{{ $url }}"
