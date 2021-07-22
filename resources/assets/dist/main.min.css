@@ -1703,7 +1703,8 @@ body:not(.home) .main-container {
     font-size: 18px;
     font-family: "Open Sans"; }
   body:not(.home) .main-container a {
-    color: #33a6ef; }
+    color: #016dad;
+    font-weight: 600; }
   body:not(.home) .main-container h4 {
     margin-top: 40px;
     color: #197275;
@@ -2855,7 +2856,7 @@ section.about-body-section.slide-up {
   max-width: 30%; }
 
 .page-template-template-leadership .media-box-title.searchtitle {
-  color: #272727;
+  color: #003a5c;
   font-size: 18px; }
 
 .page-template-template-leadership .media-box-text.searchtitle {
@@ -2864,9 +2865,12 @@ section.about-body-section.slide-up {
   margin-top: 5px; }
 
 .page-template-template-leadership .media-box-text {
-  font-family: "Rubik", sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
-  color: #606060; }
+  color: #016dad !important;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  margin-top: 8px !important; }
 
 .page-template-template-leadership .media-box-content a {
   text-decoration: none; }
@@ -2970,19 +2974,20 @@ section.about-body-section.slide-up {
   .page-template-template-leadership #grid {
     margin-left: -20px !important; } }
 
-.single-leadership h2.leader-name {
-  color: #000000;
-  font-size: 40px !important;
-  text-transform: uppercase;
-  font-family: "Rubik", sans-serif;
-  letter-spacing: 1px; }
+.single-leadership h1.leader-name {
+  color: #003a5c;
+  font-size: 50px !important;
+  font-family: "Bitter", sans-serif;
+  margin-bottom: 10px !important; }
 
 .single-leadership .leader-title {
-  font-family: "Rubik", sans-serif;
-  letter-spacing: 1px;
+  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
-  color: #6d6d6d;
-  font-weight: 500; }
+  color: #016dad !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  letter-spacing: 1.1px;
+  margin-bottom: 40px !important; }
 
 .single-leadership img.single-leader {
   max-width: 100%; }
@@ -3068,16 +3073,17 @@ section.about-body-section.slide-up {
 .single-leadership .person-contact {
   padding: 10px 60px !important;
   padding-right: 0 !important;
-  padding-bottom: 100px !important; }
+  padding-bottom: 30px !important; }
 
 .single-leadership ul.social-share {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px; }
+  margin-top: 20px;
+  padding-left: 0; }
 
 .single-leadership .social-share li a {
-  background: #33a6ef;
+  background: #016dad;
   color: white;
   width: 100%;
   height: 100%;
@@ -3108,6 +3114,26 @@ section.about-body-section.slide-up {
     margin-bottom: 30px; }
   .single-leadership section#fun-facts {
     margin-top: 0 !important; } }
+
+body.single-leadership .card,
+body.single-leadership .card .card-header {
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  padding: 0; }
+
+body.single-leadership .card ul {
+  padding-left: 0;
+  list-style-position: inside; }
+
+body.single-leadership .card h5 a {
+  color: #003a5c;
+  font-size: 20px !important;
+  text-transform: uppercase;
+  letter-spacing: 1.3px; }
+
+body.single-leadership .col-md-12.accordion-wrapper {
+  padding-left: 0; }
 
 @media (max-width: 768px) {
   #primary-nav > .container:nth-child(1) > a:nth-child(1) {
