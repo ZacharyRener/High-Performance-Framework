@@ -1,3 +1,12 @@
+<?php
+ 
+$buttonText = 'Download Now';
+if($library_type == 'videos'):
+    $buttonText = 'Watch Now';
+endif;
+
+?>
+
 
 <div class="col-md-8 col-md-offset-1 col-sm-8 body-txt pull-right about-body">
     
@@ -60,7 +69,7 @@
                         </a>
                     </h3>
                     <p><?php echo substr($summary, 0, 140); ?></p>
-                    <a class="btn btn-default btn-orange button red no-arrow" href="<?php echo get_the_permalink(); ?>" style="margin: 10px 0px; color: white; font-weight: 400; padding: 8px 15px;">Download Now</a>
+                    <a class="btn btn-default btn-orange button red no-arrow" href="<?php echo get_the_permalink(); ?>" style="margin: 10px 0px; color: white; font-weight: 400; padding: 8px 15px;"><?php echo $buttonText; ?></a>
                 </div>
             </div>
 
@@ -75,7 +84,7 @@
                         </a>
                     </h3>
                     <p><?php echo substr($summary, 0, 140); ?></p>
-                    <a class="btn btn-default btn-orange button red no-arrow" href="<?php echo get_the_permalink(); ?>" style="margin: 10px 0px; color: white; font-weight: 400; padding: 8px 15px;">Download Now</a>
+                    <a class="btn btn-default btn-orange button red no-arrow" href="<?php echo get_the_permalink(); ?>" style="margin: 10px 0px; color: white; font-weight: 400; padding: 8px 15px;"><?php echo $buttonText; ?></a>
                 </div>
             </div>
         <?php } else { ?>
@@ -88,7 +97,7 @@
                         </a>
                     </h3>
                     <p><?php echo substr($summary, 0, 140); ?></p>
-                    <a class="btn btn-default btn-orange button red no-arrow" href="<?php echo get_the_permalink(); ?>" style="margin: 10px 0px; color: white; font-weight: 400; padding: 8px 15px;">Download Now</a>
+                    <a class="btn btn-default btn-orange button red no-arrow" href="<?php echo get_the_permalink(); ?>" style="margin: 10px 0px; color: white; font-weight: 400; padding: 8px 15px;"><?php echo $buttonText; ?></a>
                 </div>
             </div>
         <?php }  ?>

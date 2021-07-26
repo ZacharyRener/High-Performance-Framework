@@ -771,7 +771,8 @@ body:not(.home) {
 
 .page-template-template-whitepapers,
 .page-template-template-guides,
-.page-template-template-webinar {
+.page-template-template-webinar,
+.page-template-template-videos {
   .media-boxes-search {
     @include searchbar;
   }
@@ -859,24 +860,35 @@ body:not(.home) {
 
 .page-template-template-guides,
 .page-template-template-webinar,
-.page-template-template-whitepapers {
+.page-template-template-whitepapers,
+.page-template-template-videos {
   h3 {
-    margin-top: 30px !important;
+    margin-top: 20px !important;
     a {
-      color: #272727;
-      font-weight: 600;
-      font-size: 28px;
+      color: #003a5c !important;
+      font-weight: 700 !important;
+      font-size: 24px;
       margin-bottom: 30px;
       text-transform: none !important;
+      font-family: "Open Sans", sans-serif !important;
     }
   }
   .btn {
     @include button;
+    @include small-button;
+    @include blue-button;
+    font-weight: 700 !important;
+    font-size: 13px !important;
   }
   .library-item {
     align-items: flex-start;
     padding-bottom: 50px;
     position: relative;
+    p {
+      font-size: 14px !important;
+      color: #272727;
+      line-height: 23px !important;
+    }
     &::after {
       width: calc(100% - 15px);
       content: "";
