@@ -10,6 +10,7 @@ import TheBlog from "./_blog";
 import StickySections from "./library/_sticky-sections";
 import Whitepapers from "./_whitepapers";
 import Webinars from "./_webinars";
+import Videos from "./_videos";
 import Guides from "./_guides";
 import SingleLeadership from "./_single-leadership";
 
@@ -27,5 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
   load("page-template-template-whitepapers", () => new Whitepapers());
   load("page-template-template-guides", () => new Guides());
   load("page-template-template-webinar", () => new Webinars());
+  load("page-template-template-videos", () => new Videos());
   load("single-leadership", () => new SingleLeadership());
 });
