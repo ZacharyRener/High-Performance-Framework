@@ -28,6 +28,10 @@
                     <strong>Categories: </strong>{!! $cat_string !!}
                 </div>
             @endif
+            @if(get_post_type() == 'position')
+                <p><strong class='mb-0 mt-5'>Apply Now:</strong></p>
+                {!! do_shortcode('[gravityforms id=4 title=false]') !!}
+            @endif
             @if(get_post_type() == 'news' || get_post_type() == 'post')
                 <strong class='share'>Share</strong>
                 {!! do_shortcode('[addtoany]') !!}
