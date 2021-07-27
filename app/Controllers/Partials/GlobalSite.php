@@ -12,6 +12,7 @@ trait GlobalSite {
         $newsParentId = 247;
         $projectParentId = 480;
         $postParentId = 649;
+        $careersParentId = 760;
 
         $parentId = wp_get_post_parent_id(get_the_ID()) == 0
             ? get_the_ID() 
@@ -31,6 +32,9 @@ trait GlobalSite {
         if(get_post_type() == "post" || get_post_type() == 'library')
             $parentId = $postParentId;   
 
+        if(get_post_type() == "position")
+            $parentId = $careersParentId;
+
         return $parentId;
         
     }
@@ -47,6 +51,7 @@ trait GlobalSite {
         $newsParentId = 247;
         $projectParentId = 735;
         $postParentId = 649;
+        $careersParentId = 760;
 
         $parentId = wp_get_post_parent_id(get_the_ID()) == 0 ?
             get_the_ID() : wp_get_post_parent_id(get_the_ID());
@@ -65,6 +70,9 @@ trait GlobalSite {
 
         if(get_post_type() == "library")
             $parentId = $libraryParentId;
+
+        if(get_post_type() == "position")
+            $parentId = $careersParentId;
 
         $mainLink = get_the_permalink($parentId);
         $mainTitle = get_the_title($parentId);
