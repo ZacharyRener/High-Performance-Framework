@@ -1188,3 +1188,26 @@ body:not(.home) {
     background: transparent !important;
   }
 }
+
+.page-template-template-open-positions {
+  .position {
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #cdcdbf;
+  }
+  .title {
+    color: #003a5c !important;
+    font-family: "Bitter" !important;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    margin-bottom: 0px !important;
+  }
+  .excerpt {
+    margin-bottom: 30px !important;
+  }
+  .button {
+    @include button;
+    @include blue-button;
+    @include small-button;
+  }
+}
