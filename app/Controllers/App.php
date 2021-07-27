@@ -12,4 +12,5 @@ class App extends Controller
     use Partials\GlobalSite;
     use Partials\Footer;
     use Partials\Header;
+    use Partials\Careers;
 }
