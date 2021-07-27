@@ -141,13 +141,17 @@ $transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
       &,
       &::placeholder {
         font-family: "Open Sans", sans-serif;
-        font-weight: 400 !important;
+        font-weight: 600 !important;
         font-size: 14px !important;
         color: black !important;
       }
     }
     input[type="submit"] {
       @include button;
+      @include small-button;
+      padding: 3px 45px !important;
+      font-size: 13px !important;
+      letter-spacing: 2.5px !important;
       border: none;
       box-shadow: none;
       margin-top: 10px;
@@ -180,4 +184,11 @@ body:not(.home) {
 
 .blue-button a {
   @include blue-button;
+}
+
+.navigation li {
+  padding-bottom: 0;
+  a:hover {
+    color: #00b8ed !important;
+  }
 }
