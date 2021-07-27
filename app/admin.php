@@ -505,6 +505,56 @@ add_action( 'init', function(){
 
     register_taxonomy( 'blog_industry', array( 'post' ), $args );
 
+    $labels = array(
+		'name'                  => _x( 'Job Positions', 'Post Type General Name', 'jtptheme' ),
+		'singular_name'         => _x( 'Position', 'Post Type Singular Name', 'jtptheme' ),
+		'menu_name'             => __( 'Job Positions', 'jtptheme' ),
+		'name_admin_bar'        => __( 'Position', 'jtptheme' ),
+		'archives'              => __( 'Position Archives', 'jtptheme' ),
+		'attributes'            => __( 'Position Attributes', 'jtptheme' ),
+		'parent_item_colon'     => __( 'Parent Position:', 'jtptheme' ),
+		'all_items'             => __( 'All Positions', 'jtptheme' ),
+		'add_new_item'          => __( 'Add New Position', 'jtptheme' ),
+		'add_new'               => __( 'Add New Position', 'jtptheme' ),
+		'new_item'              => __( 'New Position', 'jtptheme' ),
+		'edit_item'             => __( 'Edit Position', 'jtptheme' ),
+		'update_item'           => __( 'Update Position', 'jtptheme' ),
+		'view_item'             => __( 'View Position', 'jtptheme' ),
+		'view_items'            => __( 'View Position', 'jtptheme' ),
+		'search_items'          => __( 'Search Position', 'jtptheme' ),
+		'not_found'             => __( 'Not found', 'jtptheme' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'jtptheme' ),
+		'featured_image'        => __( 'Featured Image', 'jtptheme' ),
+		'set_featured_image'    => __( 'Set featured image', 'jtptheme' ),
+		'remove_featured_image' => __( 'Remove featured image', 'jtptheme' ),
+		'use_featured_image'    => __( 'Use as featured image', 'jtptheme' ),
+		'insert_into_item'      => __( 'Insert into Position', 'jtptheme' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this Position', 'jtptheme' ),
+		'items_list'            => __( 'Items list', 'jtptheme' ),
+		'items_list_navigation' => __( 'Items list navigation', 'jtptheme' ),
+		'filter_items_list'     => __( 'Filter items list', 'jtptheme' ),
+	);
+	$args = array(
+		'label'                 => __( 'Position', 'jtptheme' ),
+		'description'           => __( 'Position', 'jtptheme' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor','author','thumbnail', 'page-attributes'),
+		//'taxonomies'            => array( 'categories' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 10,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,		
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'position', $args );
+
 }, 0 );
 
 

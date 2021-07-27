@@ -177,3 +177,7 @@ body:not(.home) {
     padding-bottom: 78px;
   }
 }
+
+.blue-button a {
+  @include blue-button;
+}
