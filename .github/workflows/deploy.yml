@@ -3,7 +3,7 @@ name: Command via SSH
 on:
   pull_request
     branches:
-      - sites/carl-elefante
+      - "sites/carl-elefante"
 
 jobs:
   build:
