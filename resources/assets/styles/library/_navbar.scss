@@ -1,17 +1,17 @@
 /* ============================================================== *
  * Utility Menu Colors                                            *
  * ============================================================== */
-$utility__background: #494949;
-$utility__social__static-color: #b7b8bb;
-$utility__social__hover-color: #ddd;
-$utility__menu__static-color: #a8a8a8;
-$utility__menu__hover-color: black;
+$utility__background: #dedede;
+$utility__social__static-color: #9b9b9b;
+$utility__social__hover-color: #272727;
+$utility__menu__static-color: #434343;
+$utility__menu__hover-color: #272727;
 $utility__menu__font: $mainFont;
 $utility__menu__font-size: 0.85rem;
 $utility__menu__text-transform: uppercase;
 $utility__menu__font-weight: 400;
-$utility__search__background: #606060;
-$utility__search__color: white;
+$utility__search__background: #ffffff;
+$utility__search__color: #434343;
 /* ============================================================== *
    * Primary Navigation Colors                                      *
    * ============================================================== */
@@ -21,7 +21,7 @@ $primary__nav__color-static: #3d3d3d;
 $primary__nav__font: $mainFont;
 $primary__nav__font-size: 0.5rem;
 $primary__nav__text-transform: uppercase;
-$primary__nav__font-weight: 500;
+$primary__nav__font-weight: 400;
 $primary__sub-menu__background-static: #323b3e;
 $primary__sub-menu__font: "Open Sans", sans-serif;
 $primary__sub-menu__font-size: 0.8rem;
@@ -76,6 +76,7 @@ nav#primary {
       li a {
         color: $utility__menu__static-color;
         display: flex;
+
         align-items: center;
         font-family: $utility__menu__font;
         font-size: $utility__menu__font-size;
@@ -330,19 +331,25 @@ nav#primary {
   padding: 0 20px;
   padding-bottom: 15px;
   text-decoration: none;
-  font-size: 1rem !important;
-  font-weight: 400;
+  font-size: 1.15rem !important;
+  font-weight: 500;
   letter-spacing: 1px !important;
   text-transform: uppercase;
-  font-family: "Rubik", sans-serif;
+  font-family: "Rajdhani", sans-serif;
 }
 .dropdown-menu-custom .column:nth-child(1) .section {
   max-width: 150px !important;
 }
 a.section-title-custom {
   color: #202020;
+  position: relative;
+  display: block;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #f0f0f0;
   &:hover {
     text-decoration: none;
+    color: #202020;
+    border-bottom: 3px solid #00bec0;
   }
   text-decoration: none;
   font-size: 16px !important;
@@ -350,6 +357,9 @@ a.section-title-custom {
   letter-spacing: 1.1px !important;
   text-transform: uppercase;
   font-family: "Rajdhani", sans-serif;
+}
+
+.section {
 }
 
 a.sub-menu-link {
@@ -442,7 +452,7 @@ a.section-title-custom {
 
 .section {
   margin-bottom: 0px;
-  padding-bottom: 25px;
+  padding-bottom: 15px;
 }
 
 .section:nth-last-child(1) {
@@ -487,19 +497,21 @@ a.section-title-custom {
 
 #header {
   .top-level-nav-item > a {
-    letter-spacing: normal !important;
+    letter-spacing: 1.2px !important;
   }
 
   #utility-menu ul li,
   #utility-menu ul li a {
-    letter-spacing: normal !important;
-    font-size: 0.75rem;
+    letter-spacing: 1.4px !important;
+    font-weight: 500 !important;
+    font-size: 0.8rem;
     padding: 4px 0;
   }
 
   i.fab.fa-linkedin-in {
-    color: white;
+    color: #9b9b9b;
     font-size: 14px !important;
+    margin-right: 0 !important;
   }
 
   #utility-menu #utility {
@@ -508,7 +520,9 @@ a.section-title-custom {
 
   input#s,
   input#s::placeholder {
-    font-size: 0.75rem !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 1.4px !important;
+    font-weight: 500 !important;
   }
 }
 @media (min-width: 769px) and (max-height: 500px) {
@@ -546,4 +560,38 @@ a.section-title-custom {
   nav#socials {
     padding: 0 !important;
   }
+}
+
+.dropdown-menu-custom .column {
+  min-width: unset;
+}
+
+.sub-section.with-quote {
+  padding-left: 5%;
+  max-width: 40%;
+  .quote {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: #00a093;
+    line-height: 34px;
+  }
+  .excerpt {
+  }
+  .button {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    color: #00a093;
+    font-weight: 600;
+  }
+}
+
+.section:nth-last-child(1) {
+  padding-bottom: 0;
+}
+
+#utility-menu ul li {
+  margin-right: 0 !important;
 }
