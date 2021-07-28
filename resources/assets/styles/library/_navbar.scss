@@ -316,7 +316,7 @@ nav#primary {
 }
 
 .dropdown-menu-custom {
-  background: #494949;
+  background: #f0f0f0;
   display: flex;
   padding: 30px 40px;
 }
@@ -336,19 +336,20 @@ nav#primary {
   text-transform: uppercase;
   font-family: "Rubik", sans-serif;
 }
-
+.dropdown-menu-custom .column:nth-child(1) .section {
+  max-width: 150px !important;
+}
 a.section-title-custom {
-  color: white;
+  color: #202020;
   &:hover {
-    color: #fbc84d;
     text-decoration: none;
   }
   text-decoration: none;
-  font-size: 1rem !important;
-  font-weight: 400;
-  letter-spacing: normal !important;
-  text-transform: none;
-  font-family: "Rubik", sans-serif;
+  font-size: 16px !important;
+  font-weight: 600;
+  letter-spacing: 1.1px !important;
+  text-transform: uppercase;
+  font-family: "Rajdhani", sans-serif;
 }
 
 a.sub-menu-link {
@@ -387,25 +388,18 @@ nav#primary {
 }
 
 .dropdown-menu-custom::before {
-  content: "";
-  width: 100px;
-  position: absolute;
-  top: -10px;
-  background: #f06944;
-  height: 10px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .dropdown-menu-custom.hidden {
   display: none;
 }
 .dropdown-menu-wrapper {
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100vw;
+  left: -20px;
+  transform: none;
+  overflow: hidden;
   top: 82px;
   position: absolute;
-  margin-top: 10px;
 }
 .top-level-nav-item > a {
   text-decoration: none;
@@ -447,7 +441,8 @@ a.section-title-custom {
 }
 
 .section {
-  margin-bottom: 16px;
+  margin-bottom: 0px;
+  padding-bottom: 25px;
 }
 
 .section:nth-last-child(1) {
