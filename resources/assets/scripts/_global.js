@@ -3,6 +3,7 @@ export default class Global {
     this.handleTrayMenu();
     this.handleLeftNavHover();
     //if (window.innerWidth > 768) this.makeOffersSticky();
+    console.log("hii");
   }
 
   handleTrayMenu() {
