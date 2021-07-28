@@ -20,6 +20,9 @@ section.body-section.seo-copy {
     @media (max-width: 1000px) {
       max-width: 100%;
     }
+    background: linear-gradient(90deg, #00b8ed 0%, #00fffe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   p {
