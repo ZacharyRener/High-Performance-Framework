@@ -44,7 +44,7 @@ $(".owl-carousel:not(.owl-carousel-clients)").owlCarousel({
             @endif
             singleItem: true,
             lazyLoad: true,
-            @if( $slide_transition_style === 'fade' && false )
+            @if( $slide_transition_style === 'fade' )
                 transitionStyle: 'fade',
                 items: 1,
                 loop: true,
