@@ -36,9 +36,10 @@
   .button {
     @include small-button;
     letter-spacing: 2px !important;
-    font-size: 13px !important;
-    padding-left: 30px !important;
-    padding-right: 30px !important;
+
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+    padding: 3px 30px !important;
   }
 }
 $transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
@@ -195,4 +196,25 @@ body:not(.home) {
 
 #utility-menu #socials li {
   margin-right: 0 !important;
+}
+
+/* Contact Us Page */
+.page-id-668 {
+  .main-container h5 {
+    color: #003a5c !important;
+  }
+
+  div#gform_wrapper_3 {
+    border-top: 10px solid #003a5c;
+    padding: 45px 75px !important;
+  }
+
+  aside p {
+    font-size: 13px !important;
+    line-height: 21px;
+    padding-right: 50px;
+  }
+  .gform_wrapper form input[type="submit"] {
+    @include small-button;
+  }
 }
