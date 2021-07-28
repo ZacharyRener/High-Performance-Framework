@@ -1,7 +1,7 @@
 name: Command via SSH
 
 on:
-  push-disabled:
+  pull_request:
     branches:
       - master
 
@@ -13,7 +13,7 @@ jobs:
       - name: pull git OPEN SSH Private Key
         uses: garygrossgarten/github-action-ssh@release
         with:
-          command: cd daviekaplan.mifw.co/wp-content/themes/davie-kaplan && git checkout master && git pull origin master
+          command: cd odyssey.mifw.co/wp-content/themes/starting-point && git checkout odyssey && git pull origin odyssey
           host: madeinfortworth.com
           username: madeinfortworth
           privateKey: ${{ secrets.PRIVATE_KEY}}
