@@ -276,7 +276,7 @@
         <div class="card-header" role="tab" id="heading<?php echo $collapse_count; ?>">
             <h5 class="mb-0">
             <a class='collapsed' data-toggle="collapse" href="#collapse<?php echo $collapse_count; ?>" role="button" aria-expanded="true" aria-controls="collapse<?php echo $collapse_count; ?>">
-                Content
+                Publications
                 <span class="accordion-icon"></span>
             </a>
             </h5>

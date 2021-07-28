@@ -398,7 +398,7 @@ body:not(.home) {
   .featured-content-wrapper.sidebar-box {
     background: #e2e2d3;
     padding: 50px;
-    padding-top: 30px !important;
+    padding-top: 20px !important;
     border-top: 11px solid #003a5c;
     padding-bottom: 65px;
     margin-bottom: 50px;
@@ -406,7 +406,7 @@ body:not(.home) {
 
   h5.ftr-content-title {
     margin: 0 auto !important;
-    font-size: 16px !important;
+    font-size: 15px !important;
     color: #003a5c !important;
     text-transform: uppercase;
     letter-spacing: 1.2px;
@@ -417,15 +417,17 @@ body:not(.home) {
 
   .featured-content p strong {
     margin: 0 auto !important;
-    font-size: 22px !important;
+    font-size: 21px !important;
+    display: block;
     text-transform: none;
     letter-spacing: normal;
     margin-bottom: 0px !important;
+    line-height: 25px !important;
   }
 
   .featured-content p {
     margin: 0 auto !important;
-    font-size: 19px !important;
+    font-size: 14px !important;
     color: white !important;
     text-transform: none;
     letter-spacing: normal;
@@ -462,6 +464,8 @@ body:not(.home) {
     @media (max-width: 992px) {
       margin-top: 20px;
     }
+    padding-left: 25px !important;
+    padding-right: 25px !important;
   }
   .library-category > h5 {
     text-transform: uppercase;
@@ -553,7 +557,8 @@ body:not(.home) {
       color: black !important;
       margin-top: 25px !important;
       font-weight: 400 !important;
-      font-size: 16px !important;
+      font-size: 13px !important;
+      line-height: 19px;
       margin-bottom: 10px !important;
     }
     .button {
@@ -561,8 +566,8 @@ body:not(.home) {
       @include small-button;
       @include blue-button;
 
-      padding-left: 40px !important;
-      padding-right: 40px !important;
+      padding-left: 25px !important;
+      padding-right: 25px !important;
     }
     .fpo-img.pull-left img {
       height: 185px !important;
@@ -853,7 +858,8 @@ body:not(.home) {
     color: black !important;
     margin-top: 25px !important;
     font-weight: 400 !important;
-    font-size: 16px !important;
+    font-size: 13px !important;
+    line-height: 20px !important;
     margin-bottom: 10px !important;
   }
 }
@@ -1221,4 +1227,36 @@ body:not(.home) {
       letter-spacing: 1.3px !important;
     }
   }
+}
+.page-template-template-library .featured-content p strong,
+.page-template-template-library
+  .featured-content
+  body:not(.home)
+  .main-container
+  .about-body
+  li
+  strong,
+body:not(.home)
+  .main-container
+  .about-body
+  .page-template-template-library
+  .featured-content
+  li
+  strong,
+.page-template-template-blog .featured-content p strong,
+.page-template-template-blog
+  .featured-content
+  body:not(.home)
+  .main-container
+  .about-body
+  li
+  strong,
+body:not(.home)
+  .main-container
+  .about-body
+  .page-template-template-blog
+  .featured-content
+  li
+  strong {
+  margin-bottom: 10px !important;
 }
