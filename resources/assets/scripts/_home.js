@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import SpireServices from "./library/_spire-services";
 import LoadingBar from "./_loadingBar";
 import SlickCarousel from "./_slick-carousel";
+import TypeIt from "typeit";
 
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
@@ -21,7 +22,19 @@ export default class Home {
     this.handleHiddenHover(".solution");
     this.matchOfferHeights();
     this.handleIndustryHover();
-    this.renderSlickCarousel();
+    //this.renderSlickCarousel();
+    this.addTypeAnimation();
+  }
+
+  addTypeAnimation() {
+    console.log("in type animation");
+    new TypeIt(".slide-txt h2", {
+      speed: 200,
+      loop: true,
+    })
+      .pause(5000)
+      .go()
+      .pause(1000);
   }
 
   renderSlickCarousel() {
