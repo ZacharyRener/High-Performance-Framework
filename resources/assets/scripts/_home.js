@@ -26,15 +26,26 @@ export default class Home {
     this.addTypeAnimation();
   }
 
-  addTypeAnimation() {
-    console.log("in type animation");
-    new TypeIt(".slide-txt h2", {
-      speed: 200,
+  runAnimation(selector) {
+    new TypeIt(selector, {
+      speed: 100,
       loop: true,
     })
       .pause(5000)
       .go()
       .pause(1000);
+  }
+
+  addTypeAnimation() {
+    setTimeout(() => {
+      const amountOfSlides = document.querySelectorAll(
+        ".home-slider .owl-item"
+      ).length;
+      console.log(amountOfSlides);
+      for (let i = 1; i <= amountOfSlides; i++) {
+        this.runAnimation(`.home-slider .owl-item:nth-child(${i}) h2`);
+      }
+    }, 1000);
   }
 
   renderSlickCarousel() {
