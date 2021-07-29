@@ -32,9 +32,9 @@ if( !empty($hpf_client_slider_left_arrow ) ){
         setTimeout(()=>{
 $(".owl-carousel:not(.owl-carousel-clients)").owlCarousel({
             loop: true,
-            navigation: true,
+            dots: true,
             autoplay: true,
-            autoPlaySpeed: 5000,
+            autoPlaySpeed: 8000,
             autoPlayTimeout: 5000,
             autoplayHoverPause: true,
             @if( !empty( $slide_transition_speed ) )
@@ -44,7 +44,7 @@ $(".owl-carousel:not(.owl-carousel-clients)").owlCarousel({
             @endif
             singleItem: true,
             lazyLoad: true,
-            @if( $slide_transition_style === 'fade' && false )
+            @if( $slide_transition_style === 'fade' )
                 transitionStyle: 'fade',
                 items: 1,
                 loop: true,
@@ -52,17 +52,18 @@ $(".owl-carousel:not(.owl-carousel-clients)").owlCarousel({
                 stagePadding: 0,
                 smartSpeed: 450,
             @endif
-            pagination: false,
-            navigationText: ['<i class="fa {{ $msl_left_arrow }}" aria-hidden="true"></i>', '<i class="fa {{ $msl_right_arrow }}" aria-hidden="true"></i>'],
+            pagination: true,
             video:true,
         });
 
-        jQuery('.owl-carousel:not(.owl-carousel-clients)').trigger('owl.play', {{ $slide_auto_play_length }});
-
-        jQuery('.owl-carousel:not(.owl-carousel-clients)').trigger('next.owl.carousel', 1000);
+        jQuery('.owl-carousel:not(.owl-carousel-clients)').trigger('owl.play', 8000);
+        jQuery('.owl-carousel:not(.owl-carousel-clients)').on('changed.owl.carousel', function(event){
+            console.log('changed');
+        })
+        jQuery('.owl-carousel:not(.owl-carousel-clients)').trigger('next.owl.carousel', 8000);
 
         jQuery('.slide-txt').addClass('done');
-
+            console.log('hello???');
         }, 0)
 
         

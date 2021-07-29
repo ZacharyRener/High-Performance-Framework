@@ -28,6 +28,8 @@ $slide_image = !empty(get_field('slide_image'))
                 $slslide_text = get_sub_field('slide_text');
                 $slider_text_alignment = get_sub_field('slider_text_alignment');
                 $slslide_heading = esc_html(get_sub_field('slide_heading'));
+                
+
                 $slbutton_text = esc_html(get_sub_field('button_text'));
                 $slbutton_link = esc_html(get_sub_field('button_link'));
                 $slheading_size = esc_html(get_sub_field('heading_font_size'));
@@ -136,6 +138,9 @@ $slide_image = !empty(get_field('slide_image'))
                     $slbutton_font_color = '#ffffff';
                 }
 
+                $fontSize = get_sub_field('font_size');
+                $headingClass = "size-$fontSize";
+
                 @endphp
                         
                 <div class="owl-slide {{ $slider_class }} {{ $boxed_class }}">
@@ -158,7 +163,7 @@ $slide_image = !empty(get_field('slide_image'))
                     
                     <div class='container'>
                         <div class="slide-txt" style="text-align: {{ $slider_text_alignment }} !important; {{ $boxedoutput }}">
-                            <h2>{{ $slslide_heading }}</h2>
+                            <h2 class='{{$headingClass}}''>{{ $slslide_heading }}</h2>
                             <p>{{ $slslide_text }}</p>
                             <a style="border-radius:{{ $slbutton_border_radius }}px; background:{{ $slbutton_color }}; color: {{ $slbutton_font_color }};" href=" {{ $slbutton_link }}">{{ $slbutton_text }}</a>
                             <div class='loading-bar-root' time-delay='10s'></div>
