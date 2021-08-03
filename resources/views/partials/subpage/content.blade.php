@@ -36,6 +36,21 @@
                 <strong class='share'>Share</strong>
                 {!! do_shortcode('[addtoany]') !!}
             @endif
+            @if(get_post_type() == 'post' && $assign_this_to_a_team_member)
+                <section class='about-author'>
+                    <div class='image'>
+                        <img class='author-image' src='{{get_the_post_thumbnail_url($team_member)}}'>
+                    </div>
+                    <div class='content-side'>
+                        <span class='name'>
+                            <a href='{{get_the_permalink($team_member)}}'>
+                                {{get_the_title($team_member)}}
+                            </a>
+                        </span>
+                        <p class='author-content'>{{strip_tags(get_the_excerpt($team_member))}}</p>
+                    </div>
+                </section>
+            @endif
         @endwhile
     @else 
         <div class="alert alert-warning">
