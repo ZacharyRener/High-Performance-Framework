@@ -73,9 +73,6 @@ div#grid {
   z-index: 2;
 }
 
-.sidebar-offer a.button {
-  font-size: 12px !important;
-}
 aside li a.active {
   color: #fbc84d !important;
 }
@@ -156,12 +153,13 @@ li.has-children:not(.right-arrow) > a::after {
 
 body:not(.home) {
   .navigation > a {
-    font-family: "Rubik", sans-serif;
-    font-size: 22px;
     text-transform: uppercase;
-    font-weight: 400;
-    color: #f06944 !important;
-    border-bottom: 2px solid #e7e7e7;
+    font-size: 28px !important;
+    color: #0c0c0c !important;
+    font-weight: 500 !important;
+    font-family: "Rajdhani", sans-serif;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #e8e8e8;
     display: block;
     padding-bottom: 20px;
     margin-bottom: 20px;
@@ -173,7 +171,12 @@ body:not(.home) {
   }
 
   .navigation ul > li > a {
-    color: #494949;
+    color: #0c0c0c;
+    font-family: "Rajdhani", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    font-size: 18px;
   }
 
   .navigation > a:hover {
@@ -202,51 +205,63 @@ body:not(.home) {
     ul.children {
       padding-left: 30px !important;
     }
-    font-family: "Rubik", sans-serif;
+    font-family: "Rajdhani", sans-serif;
     h1 {
-      color: #153355;
-      font-weight: 600;
-      font-size: 50px;
+      color: #020202;
+      font-size: 44px;
       margin-bottom: 30px;
     }
     h2 {
-      color: #494949;
-      font-size: 24px;
-      font-weight: 400;
-      margin-bottom: 50px;
+      color: #00c0b0;
+      font-size: 28px;
+      text-transform: none;
+      font-weight: 300;
+      letter-spacing: -0.5px;
+      font-family: "Roboto", sans-serif;
+      line-height: 1.4em;
     }
     h3 {
-      color: #f06944;
-      font-size: 22px;
-      font-weight: 400;
       text-transform: uppercase;
-      margin-top: 40px;
+      letter-spacing: 1px;
+      font-weight: 600;
+      font-size: 24px;
+      margin-top: 30px;
     }
     p {
-      color: #272727;
-      font-size: 18px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.8em;
+      margin-bottom: 30px;
     }
     a {
       color: #33a6ef;
     }
     h4 {
       margin-top: 40px;
-      color: #33a6ef;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 600;
     }
     h5 {
-      margin-top: 40px;
+      text-transform: uppercase;
       font-size: 18px;
-      color: #272727;
       font-weight: 600;
+      letter-spacing: 0.7px;
+      line-height: 1.3em;
+      margin-top: 40px;
     }
     h6 {
-      color: #f06944;
-      font-size: 18px;
-      font-weight: 400;
       text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.7px;
+      line-height: 1.3em;
+      color: #00c0b0;
       margin-top: 40px;
+    }
+    strong,
+    b {
+      font-weight: 600;
     }
     .wp-block-column > h6:nth-child(1) {
       margin-top: 0;
@@ -258,38 +273,48 @@ body:not(.home) {
     }
     .about-body {
       ul {
-        padding-left: 0;
-        list-style-position: inside;
+        list-style-position: outside;
       }
-      li {
+      ul > li {
         @extend p;
-        margin-bottom: 10px;
+        margin-bottom: 0;
         &::marker {
-          color: #f06944;
+          color: #000;
         }
       }
     }
   }
   blockquote {
-    background: #153355;
+    background: transparent;
     padding: 40px;
     margin-top: 60px;
+    border-top: 1px solid #00897e;
+    border-left: none !important;
+    margin-left: 50px;
+    padding-left: 0 !important;
     & > p {
-      color: white !important;
-      margin-bottom: 40px;
+      font-size: 22px !important;
+      line-height: 1.5em !important;
+      font-family: "Rajdhani", sans-serif !important;
+      font-style: normal;
+      font-weight: 500 !important;
+      color: #00c0b0;
+      border-top-style: none;
+      padding-bottom: 20px !important;
     }
     cite {
-      color: white !important;
-      font-size: 14px;
+      font-family: "Rajdhani", sans-serif;
       text-transform: uppercase;
-      font-style: unset !important;
+      font-style: normal;
+      color: #00897e !important;
+      font-weight: 600;
       letter-spacing: 1px;
-      position: relative;
+      font-size: 15px;
       &::before {
         content: "";
-        width: 20px;
-        height: 2px;
-        background: #33a6ef;
+        width: 10px;
+        height: 1px;
+        background: #008f73;
         position: absolute;
         top: -15px;
       }
@@ -837,6 +862,16 @@ body:not(.home) {
 }
 
 .sidebar-offer {
+  .portfolio-content > div:nth-last-child(1) {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(243, 243, 243, 1) 100%
+    );
+    padding: 10px 20px;
+    padding-top: 20px;
+  }
   h5 {
     text-transform: uppercase !important;
     font-family: "Rubik", sans-serif !important;
@@ -847,18 +882,25 @@ body:not(.home) {
     margin-bottom: 15px !important;
   }
   .hpf-box img {
-    border-bottom: 10px solid #f06944;
-    margin-bottom: 20px;
+    border-bottom: 5px solid #d5bd4f;
+    margin-bottom: 0px;
   }
   .btn {
     margin-top: 10px;
   }
   p {
-    font-size: 16px !important;
+    font-size: 14px !important;
+    font-family: "Robot", sans-serif;
+    color: #333333;
+    line-height: 21px !important;
+    font-weight: 400 !important;
   }
   strong {
     font-size: 18px !important;
     display: block;
+    color: #333333;
+    font-family: "Rajdhani";
+    margin-bottom: 10px;
   }
 }
 
@@ -993,4 +1035,33 @@ body:not(.home) {
       padding-bottom: 50px;
     }
   }
+}
+
+body:not(.home) .col-md-3.col-sm-4 {
+  background: #f3f3f3;
+  padding-right: 50px;
+}
+body:not(.home) .col-md-3.col-sm-4::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #f3f3f3;
+  position: absolute;
+  left: -100%;
+  top: 0;
+}
+
+body:not(.home) .col-md-3.col-sm-4::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #f3f3f3;
+  position: absolute;
+  right: -50px;
+  top: 0;
+  z-index: -1;
+}
+
+.main-container {
+  border-top: 5px solid #d5bd4f;
 }
