@@ -18,7 +18,7 @@
                 <div class='gradient-overlay'></div>
                 <span>
                     @if(!empty($pathway_icon)) 
-                        {{ '<img src="'.$pathway_icon.'"><br />' }}
+                        {!! '<img src="'.$pathway_icon.'"><br />' !!}
                     @endif
                     <div class='content'>{{ $indtext }}</div>
                 </span>
