@@ -24,6 +24,7 @@ export default class Home {
     this.handleIndustryHover();
     //this.renderSlickCarousel();
     this.addTypeAnimation();
+    this.handlePathwayHover();
   }
 
   runAnimation(selector) {
@@ -109,6 +110,17 @@ export default class Home {
             "hover"
           )
         );
+      });
+    });
+  }
+
+  handlePathwayHover() {
+    document.querySelectorAll(".a-button .wrapper").forEach((pathway) => {
+      pathway.addEventListener("mouseenter", (e) => {
+        e.currentTarget.classList.toggle("hovered");
+      });
+      pathway.addEventListener("mouseleave", (e) => {
+        e.currentTarget.classList.toggle("hovered");
       });
     });
   }

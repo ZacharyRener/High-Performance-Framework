@@ -10,17 +10,21 @@
     $backgroundImage = !empty($pathway->pathway_bg)
         ? "background: url($pathway->pathway_bg);"
         : '';
+    $excerpt = $pathway->excerpt;
     @endphp
 				
-    <div class="col-md-4 col-sm-6 a-button">
+    <div class="col-md-3 col-sm-6 a-button">
         <div class='wrapper'>
             <a style="border-width: {{ $indbutton_border }}px !important; border-color: {{ $indbutton_border_color }} !important; {{$backgroundImage}}" href="{{ $indbutton_link }}">
-                <div class='gradient-overlay'></div>
                 <span>
                     @if(!empty($pathway_icon)) 
-                        {!! '<img src="'.$pathway_icon.'"><br />' !!}
+                        {!! '<picture><img src="'.$pathway_icon.'" /></picture>' !!}
                     @endif
                     <div class='content'>{{ $indtext }}</div>
+                    <div class='excerpt'>{{ $excerpt }}</div>
+                    <div class='button-wrapper'>
+                        <a class='button' href='{{ $indbutton_link }}'>Learn More</a>
+                    </div>
                 </span>
             </a>
         </div>
