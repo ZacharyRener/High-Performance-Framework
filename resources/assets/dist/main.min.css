@@ -3094,7 +3094,6 @@ a:hover {
   text-decoration: none !important; }
 
 .page-template-template-news-events .card-header {
-  padding: 0 !important;
   background: transparent;
   border: none; }
 
@@ -3194,6 +3193,56 @@ body:not(.home) .col-md-3.col-sm-4::after {
       font-size: 14px;
       font-weight: 600;
       padding-left: 10px; }
+
+.page-template-template-news-events .card-body img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  background-color: #f3f3f3;
+  border: 1px solid #c5c5c5; }
+
+.page-template-template-news-events .news-url {
+  font-family: "Rajdhani", sans-serif;
+  color: black !important;
+  font-size: 24px;
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: 28px !important; }
+
+.page-template-template-news-events .excerpt {
+  font-size: 16px;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.page-template-template-news-events .col-md-9 {
+  font-size: 14px;
+  color: #00c0b0;
+  font-family: "Rajdhani", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1.3px; }
+
+.page-template-template-news-events h1 {
+  font-family: "Rajdhani", sans-serif !important;
+  font-size: 30px !important;
+  color: black !important; }
+
+.page-template-template-news-events .card-header i {
+  display: none; }
+
+.page-template-template-news-events .card-header {
+  border-bottom: 2px solid #f3f3f3;
+  padding-bottom: 5px !important;
+  margin-bottom: 25px !important;
+  padding-left: 0 !important; }
+
+.page-template-template-news-events .card-body .row {
+  margin-bottom: 50px; }
 
 .sections {
   display: flex; }

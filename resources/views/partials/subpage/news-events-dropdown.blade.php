@@ -49,7 +49,8 @@
                                         }else {
                                             echo '<div class="col-md-12"><a href="'.get_the_permalink().'" class="news-url">'.get_the_title().'</a>';
                                         }
-                                            echo '<br />'.get_the_date("F j");
+                                            echo '<div class="excerpt">' . App::getSnippet(get_the_excerpt(), 10) . '</div>';
+                                            echo 'Recorded '.get_the_date("F j, Y");
                                             echo '</div></div>';
                                             $prev_year = $this_year;
                                     }
