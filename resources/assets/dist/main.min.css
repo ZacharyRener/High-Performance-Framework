@@ -580,7 +580,7 @@ a.section-title-custom {
 
 .home .home-slider .owl-slide,
 .home .home-slider {
-  max-height: 100vh;
+  max-height: 800px;
   min-height: 700px; }
 
 .home .content {
@@ -1739,6 +1739,10 @@ body:not(.home) .navigation > ul {
   list-style-type: none;
   padding-left: 0; }
 
+body:not(.home) .navigation ul li {
+  max-width: 175px;
+  line-height: 21px !important; }
+
 body:not(.home) .navigation ul > li > a {
   color: #0c0c0c;
   font-family: "Rajdhani", sans-serif;
@@ -1746,12 +1750,11 @@ body:not(.home) .navigation ul > li > a {
   letter-spacing: 1.5px;
   font-weight: 600;
   font-size: 18px; }
+  body:not(.home) .navigation ul > li > a:hover {
+    color: #00c0b0 !important; }
 
 body:not(.home) .navigation > a:hover {
   text-decoration: none; }
-
-body:not(.home) .navigation ul > li > a:hover {
-  color: #fbc84d !important; }
 
 body:not(.home) .navigation > li.has-children > ul li a {
   font-size: 20px !important; }
@@ -2973,6 +2976,10 @@ body:not(.home) .main-container .about-body .page-template-template-blog-waste .
   font-family: "Rajdhani";
   margin-bottom: 10px; }
 
+.single-post .categories,
+.single-news .categories {
+  border-top: 2px solid #e7e7e7; }
+
 .single-post .gform_wrapper,
 .single-news .gform_wrapper {
   background: #e7e7e7;
@@ -3053,21 +3060,31 @@ body:not(.home) .main-container .about-body .page-template-template-blog-waste .
 .single-news .size-post-thumbnail {
   float: right;
   margin-left: 41px;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  max-width: 50%; }
+
+.single-post h1,
+.single-news h1 {
+  margin-bottom: 8px !important; }
 
 .single-post .author,
 .single-news .author {
-  color: #494949 !important;
-  font-size: 24px !important;
-  font-weight: 400 !important;
+  color: #00c0b0 !important;
+  font-size: 14px !important;
+  font-family: "Rajdhani", sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  font-weight: 600 !important;
   margin-bottom: 30px !important; }
   .single-post .author .divider,
   .single-news .author .divider {
-    margin: 0 20px; }
+    margin: 0 20px;
+    display: none; }
 
 .single-post .categories,
 .single-news .categories {
-  margin-bottom: 70px; }
+  margin-bottom: 40px;
+  margin-top: 10px; }
   .single-post .categories strong,
   .single-post .categories a,
   .single-news .categories strong,
@@ -3243,6 +3260,12 @@ body:not(.home) .col-md-3.col-sm-4::after {
 
 .page-template-template-news-events .card-body .row {
   margin-bottom: 50px; }
+
+a.section-title-custom {
+  max-width: 142px; }
+
+.column:nth-child(1) {
+  max-width: 120px; }
 
 .sections {
   display: flex; }
