@@ -1,26 +1,45 @@
 <div class="col-md-8 col-md-offset-1 col-sm-8 body-txt pull-right about-body">
-<?php if ( get_field( 'featured_content_offer' ) ): ?>
-    <?php
-    $feat_offer_id = get_field( 'featured_content_offer' );
-    ?>
-    <div class="featured-content-wrapper sidebar-box">
-        <div class="featured-content">
-            <div class="col-xs-12">
-                <h5 class="ftr-content-title">Featured Content</h5>
-                <div class="fpo-img pull-left">
-                    <img src="<?php echo esc_html__( the_field( 'offer_image', $feat_offer_id ) ); ?>" style="margin-bottom: 30px;">
-                </div>
-                <div class="f-c-title">
-                    <h4><?php echo esc_html__( the_field( 'offer_title', $feat_offer_id ) ); ?></h4>
-                </div>
-                <p><?php echo esc_html__( the_field( 'offer_excerpt', $feat_offer_id ) ); ?></p>
-                <a href="<?php echo esc_html__( the_field( 'offer_link', $feat_offer_id ) ); ?>"
-                    class="btn btn-default btn-orange button red no-arrow"><?php echo esc_html__( the_field( 'offer_button_text', $feat_offer_id ) ); ?></a>
-            </div>
-        </div>
-    </div>
 
-<?php endif; ?>
+    @include('partials.subpage.sticky-sections')
+    @if(have_posts())
+        @while(have_posts()) @php the_post(); @endphp
+            @if(get_post_type() == 'news' || get_post_type() == 'post')
+                <h1>{!! get_the_title() !!}</h1>
+            @endif
+            @if(get_post_type() == 'post')
+                <p class='author'>{{ get_the_date() }}<span class='divider'>|</span>{{get_the_author()}}</p>
+                @if(has_post_thumbnail())
+                {!! get_the_post_thumbnail() !!}
+                @endif
+            @endif
+            <span class='wrapper'>@php the_content(); @endphp</span>
+            @if(get_post_type() == 'post' || get_post_type() == 'news')
+                @php
+                    $cat_string = '';
+                    $post_cats = wp_get_post_categories(get_the_ID());
+                    foreach($post_cats as $c) {
+                        $cat = get_category($c);
+                        $catLink = get_category_link($cat->cat_ID);
+                        $cat_string .= $cat_string == '' 
+                            ? "<a href='/insights/articles/'>$cat->name</a>"
+                            : ", <a href='/insights/articles/'>$cat->name</a>";
+                    }
+                @endphp
+                <div class='categories'>
+                    <strong>Categories: </strong>{!! $cat_string !!}
+                </div>
+            @endif
+            @if(get_post_type() == 'news' || get_post_type() == 'post')
+                <strong class='share'>Share</strong>
+                {!! do_shortcode('[addtoany]') !!}
+            @endif
+        @endwhile
+    @else 
+        <div class="alert alert-warning">
+            {{ __('Sorry, but the page you were trying to view does not exist.', 'sage') }}
+        </div>
+        {!! get_search_form(false) !!}
+    @endif
 
 <?php if ( have_rows( 'library_categories' ) ): ?>
 <div class='row'>
