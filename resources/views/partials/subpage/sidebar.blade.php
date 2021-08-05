@@ -14,7 +14,7 @@
             {!! the_field('additional_sidebar_content') !!}
         @endif
 
-        @if(get_post_type() == "post")
+        @if(get_post_type() == "post" || get_page_template_slug() == 'views/template-library.blade.php')
             @include('partials.subpage.blog-sidebar')
         @endif
 
