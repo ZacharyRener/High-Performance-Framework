@@ -145,7 +145,7 @@ trait GlobalSite {
                 
             endif;
             $output .= "</ul>";
-        echo "
+        $output .= "
         </div>
 
         ";
