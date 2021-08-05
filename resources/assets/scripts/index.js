@@ -12,6 +12,9 @@ import Whitepapers from "./_whitepapers";
 import Webinars from "./_webinars";
 import Guides from "./_guides";
 import SingleLeadership from "./_single-leadership";
+import TheWasteBlog from "./_blog-waste";
+import TheDemandsBlog from "./_blog-demands";
+import TheDesignBlog from "./_blog-design";
 
 document.addEventListener("DOMContentLoaded", () => {
   load("page", () => new Global());
@@ -28,4 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   load("page-template-template-guides", () => new Guides());
   load("page-template-template-webinar", () => new Webinars());
   load("single-leadership", () => new SingleLeadership());
+  load("page-template-template-blog-waste", () => new TheWasteBlog());
+  load("page-template-template-blog-demands", () => new TheDemandsBlog());
+  load("page-template-template-blog-design", () => new TheDesignBlog());
 });

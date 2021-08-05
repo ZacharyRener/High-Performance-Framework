@@ -1,65 +1,45 @@
 <div class="col-md-8 col-md-offset-1 col-sm-8 body-txt pull-right about-body">
-    
-    @if(get_field('featured_article'))
 
-        @php
-
-        $imageUrl = get_the_post_thumbnail_url(get_field('featured_article'));
-        $title = get_the_title(get_field('featured_article'));
-        $date = get_the_date('', get_field('featured_article'));
-        $url = get_the_permalink(get_field('featured_article'));
-
-        @endphp
-
-    @else
-
-    @php
-        
-    $args = [
-        'post_type' => 'post',
-        'posts_per_page' => 1,
-        'orderby' => 'date',
-        'order' => 'DESC'
-    ];
-
-    $recent_post = new WP_Query($args);
-
-    @endphp
-
-    @if($recent_post->have_posts())
-        @while($recent_post->have_posts())
-            @php $recent_post->the_post(); @endphp
-
-            @php
-            $imageUrl = get_the_post_thumbnail_url();
-            $title = get_the_title();
-            $date = get_the_date();
-            $url = get_the_permalink();
-            @endphp
-
+    @include('partials.subpage.sticky-sections')
+    @if(have_posts())
+        @while(have_posts()) @php the_post(); @endphp
+            @if(get_post_type() == 'news' || get_post_type() == 'post')
+                <h1>{!! get_the_title() !!}</h1>
+            @endif
+            @if(get_post_type() == 'post')
+                <p class='author'>{{ get_the_date() }}<span class='divider'>|</span>{{get_the_author()}}</p>
+                @if(has_post_thumbnail())
+                {!! get_the_post_thumbnail() !!}
+                @endif
+            @endif
+            <span class='wrapper'>@php the_content(); @endphp</span>
+            @if(get_post_type() == 'post' || get_post_type() == 'news')
+                @php
+                    $cat_string = '';
+                    $post_cats = wp_get_post_categories(get_the_ID());
+                    foreach($post_cats as $c) {
+                        $cat = get_category($c);
+                        $catLink = get_category_link($cat->cat_ID);
+                        $cat_string .= $cat_string == '' 
+                            ? "<a href='/insights/articles/'>$cat->name</a>"
+                            : ", <a href='/insights/articles/'>$cat->name</a>";
+                    }
+                @endphp
+                <div class='categories'>
+                    <strong>Categories: </strong>{!! $cat_string !!}
+                </div>
+            @endif
+            @if(get_post_type() == 'news' || get_post_type() == 'post')
+                <strong class='share'>Share</strong>
+                {!! do_shortcode('[addtoany]') !!}
+            @endif
         @endwhile
-    @endif
-
-    @endif
-
-    <h1>Blog</h1>
-
-    <div class="featured-content-wrapper sidebar-box">
-        <div class="featured-content">
-            <div class="col-xs-12">
-                <div class="fpo-img pull-left">
-                    <img src="{{ $imageUrl }}" style="margin-bottom: 30px;">
-                </div>
-                <div class="f-c-title">
-                    <h5 class="ftr-content-title">Featured Article</h5>
-                    <h4>{{ $title }}</h4>
-                </div>
-                <p style='display:none;'>{{ $date }}</p>
-                <a href="{{ $url }}"
-                    class="button red no-arrow">Read Post</a>
-            </div>
+    @else 
+        <div class="alert alert-warning">
+            {{ __('Sorry, but the page you were trying to view does not exist.', 'sage') }}
         </div>
-    </div>
+        {!! get_search_form(false) !!}
+    @endif
 
     <div id='blog-root'></div>
 
