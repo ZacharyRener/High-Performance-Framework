@@ -9,7 +9,7 @@ trait GlobalSite {
 
         $leadershipParentId = 247;
         $libraryParentId = 649;
-        $newsParentId = 247;
+        $newsParentId = 520;
         $projectParentId = 480;
         $postParentId = 649;
 
@@ -23,7 +23,7 @@ trait GlobalSite {
             $parentId = $leadershipParentId;
 
         if(get_post_type() == "news")
-            $parentId = $leadershipParentId;
+            $parentId = $newsParentId;
 
         if(get_post_type() == "project")
             $parentId = $projectParentId;
@@ -44,7 +44,7 @@ trait GlobalSite {
 
         $leadershipParentId = 247;
         $libraryParentId = 649;
-        $newsParentId = 247;
+        $newsParentId = 520;
         $projectParentId = 735;
         $postParentId = 649;
 
@@ -55,7 +55,7 @@ trait GlobalSite {
             $parentId = $leadershipParentId;
 
         if(get_post_type() == "news")
-            $parentId = $leadershipParentId;
+            $parentId = $newsParentId;
 
         if(get_post_type() == "project")
             $parentId = $projectParentId;

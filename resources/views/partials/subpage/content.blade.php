@@ -6,7 +6,7 @@
                 <h1>{!! get_the_title() !!}</h1>
             @endif
             @if(get_post_type() == 'post')
-                <p class='author'>{{ get_the_date() }}<span class='divider'>|</span>{{get_the_author()}}</p>
+                <p class='author'>{{ get_the_date() }}</p>
                 @if(has_post_thumbnail())
                 {!! get_the_post_thumbnail() !!}
                 @endif
@@ -25,7 +25,7 @@
                     }
                 @endphp
                 <div class='categories'>
-                    <strong>Categories: </strong>{!! $cat_string !!}
+      
                 </div>
             @endif
             @if(get_post_type() == 'news' || get_post_type() == 'post')

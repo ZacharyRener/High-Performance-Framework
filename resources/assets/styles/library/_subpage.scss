@@ -170,8 +170,15 @@ body:not(.home) {
     padding-left: 0;
   }
 
+  .navigation ul li {
+    max-width: 175px;
+    line-height: 21px !important;
+  }
   .navigation ul > li > a {
     color: #0c0c0c;
+    &:hover {
+      color: #00c0b0 !important;
+    }
     font-family: "Rajdhani", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -182,11 +189,6 @@ body:not(.home) {
   .navigation > a:hover {
     text-decoration: none;
   }
-
-  .navigation ul > li > a:hover {
-    color: #fbc84d !important;
-  }
-
   .navigation > li.has-children > ul li a {
     font-size: 20px !important;
   }
@@ -939,6 +941,9 @@ body:not(.home) {
 
 .single-post,
 .single-news {
+  .categories {
+    border-top: 2px solid #e7e7e7;
+  }
   @include form;
   .btn {
     @include button;
@@ -947,14 +952,22 @@ body:not(.home) {
     float: right;
     margin-left: 41px;
     margin-bottom: 50px;
+    max-width: 50%;
+  }
+  h1 {
+    margin-bottom: 8px !important;
   }
   .author {
-    color: #494949 !important;
-    font-size: 24px !important;
-    font-weight: 400 !important;
+    color: #00c0b0 !important;
+    font-size: 14px !important;
+    font-family: "Rajdhani", sans-serif !important;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    font-weight: 600 !important;
     margin-bottom: 30px !important;
     .divider {
       margin: 0 20px;
+      display: none;
     }
   }
   .categories {
@@ -962,7 +975,8 @@ body:not(.home) {
     a {
       display: none;
     }
-    margin-bottom: 70px;
+    margin-bottom: 40px;
+    margin-top: 10px;
   }
   .share {
     margin-top: 70px !important;
@@ -1166,4 +1180,12 @@ body:not(.home) .col-md-3.col-sm-4::after {
   .card-body .row {
     margin-bottom: 50px;
   }
+}
+
+a.section-title-custom {
+  max-width: 142px;
+}
+
+.column:nth-child(1) {
+  max-width: 120px;
 }
