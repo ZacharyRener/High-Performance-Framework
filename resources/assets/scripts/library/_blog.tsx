@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 var base64 = require("base-64");
 
-interface AppProps {}
+interface AppProps {
+  category: string;
+  filters: string;
+}
 interface AppState {
   posts: Array<any>;
   categories: Array<any>;
@@ -55,56 +58,24 @@ export default class Blog extends Component<AppProps, AppState> {
     this.loadServices();
   }
 
-  componentDidMount() {
-    // @ts-ignore
-    //jQuery(".sidebar.col-md-3").insertAfter(jQuery("aside"));
-  }
-
   loadBlogPosts() {
-    const fetchUrl = `/wp-json/wp/v2/posts?per_page=${this.state.postsPerPage}&offset=${this.state.postOffset}&_embed${this.state.categoryUrl}`;
+    const fetchUrl = `/wp-json/wp/v2/posts?per_page=${this.state.postsPerPage}&offset=${this.state.postOffset}&_embed${this.state.categoryUrl}&categories=${this.props.category}`;
     console.log(fetchUrl);
 
-    var formdata = new FormData();
-    formdata.append("username", "Zach");
-    formdata.append("password", "08N+hy*rZll_");
-
-    var requestOptions: any = {
-      method: "POST",
-      body: formdata,
-      redirect: "follow",
-    };
-
-    fetch("/wp-json/jwt-auth/v1/token?", requestOptions)
+    fetch(fetchUrl)
       .then((response) => response.json())
-      .then((result) => {
-        let headers = new Headers();
-        headers.append("Authorization", `Bearer ${result.token}`);
-
-        fetch(fetchUrl, {
-          method: "GET",
-          headers: headers,
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            this.setState({ posts: this.state.posts.concat(data) });
-            this.setState({ buttonText: "View More" });
-          });
+      .then((data) => {
+        this.setState({ posts: this.state.posts.concat(data) });
+        this.setState({ buttonText: "View More" });
       });
   }
 
   searchThenLoadBlogPosts(searchTerm: any) {
-    let headers = new Headers();
-    headers.append(
-      "Authorization",
-      "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zcGlyZS5oaW5nZWRldi5jb20iLCJpYXQiOjE2MTg4NTAwMzQsIm5iZiI6MTYxODg1MDAzNCwiZXhwIjoxNjE5NDU0ODM0LCJkYXRhIjp7InVzZXIiOnsiaWQiOiIxIn19fQ.3xEJnXjDBtA6EvQyrBoUXfkVCM8OX3cza5y1Atcgi2s"
-    );
-
     const fetchUrl = `/wp-json/wp/v2/posts?per_page=${this.state.postsPerPage}&offset=${this.state.postOffset}&_embed${this.state.categoryUrl}&search=${searchTerm}`;
     console.log(fetchUrl);
 
     fetch(fetchUrl, {
       method: "GET",
-      headers: headers,
     })
       .then((response) => response.json())
       .then((data) => {
@@ -254,9 +225,9 @@ export default class Blog extends Component<AppProps, AppState> {
     });
   }
 
-  render() {
-    return (
-      <section id="blogPage">
+  filters() {
+    if (this.props.filters != "false") {
+      return (
         <div className="">
           <div className="media-boxes-search">
             <span className="media-boxes-icon fa fa-search"></span>
@@ -334,7 +305,16 @@ export default class Blog extends Component<AppProps, AppState> {
             </ul>
           </div>
         </div>
+      );
+    } else {
+      return <span></span>;
+    }
+  }
 
+  render() {
+    return (
+      <section id="blogPage">
+        {this.filters()}
         <div className="blogs about-body">
           <section id="selectedCats" className={this.state.selectedClass}>
             <span onClick={this.handleCategoryRemoval}>
@@ -344,9 +324,8 @@ export default class Blog extends Component<AppProps, AppState> {
 
           {this.state.posts.map((post, id) => {
             const image = () => {
-              const hasMedia: boolean = post._embedded.hasOwnProperty(
-                "wp:featuredmedia"
-              );
+              const hasMedia: boolean =
+                post._embedded.hasOwnProperty("wp:featuredmedia");
               const hasImage: boolean = hasMedia
                 ? post._embedded["wp:featuredmedia"][0].hasOwnProperty(
                     "source_url"
@@ -373,7 +352,9 @@ export default class Blog extends Component<AppProps, AppState> {
                 <a href={post.link}>{post.title.rendered}</a>
                 <div
                   className="excerpt"
-                  dangerouslySetInnerHTML={{ __html: post._embedded['author'][0].name }}
+                  dangerouslySetInnerHTML={{
+                    __html: post._embedded["author"][0].name,
+                  }}
                 />
               </div>
             );
