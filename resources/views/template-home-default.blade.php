@@ -8,7 +8,6 @@
         @include('partials.home.quick-hit')
         @include('partials.home.pathways')
         @include('partials.home.offers')
-        @include('partials.home.selected-clients')
         @include('partials.home.seo-copy')
     @endwhile
     @include('partials.home.owl-carousel-logic')

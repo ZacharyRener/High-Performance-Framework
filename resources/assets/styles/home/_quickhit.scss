@@ -1,13 +1,12 @@
 .quick-hit.container {
-  padding-top: 40px;
+  padding-top: 100px;
   padding-bottom: 100px;
-  margin-top: 100px;
-  h1 {
-    color: #990000;
-    font-family: "Rubik", sans-serif;
-    text-transform: uppercase;
+  margin-top: 0;
+  text-align: center;
+  h2 {
+    color: #00c0b0;
+    font-family: "Rajdhani", sans-serif;
     font-size: 32px;
-    letter-spacing: 1.25px;
     margin-bottom: 18px;
     @include phone {
       font-size: 28px;
@@ -17,22 +16,13 @@
 
   p {
     color: black;
-    font-family: "Rubik", sans-serif;
+    font-family: "Roboto", sans-serif;
     line-height: 33px;
     margin-bottom: 0;
-    font-weight: 600;
-    color: #153355;
-    font-size: 23px;
+    font-weight: 400;
+    color: #333333;
+    font-size: 18px;
     line-height: 30px;
-  }
-  &:before {
-    content: "";
-    background-color: #f06944;
-    width: 115px;
-    height: 6px;
-    position: absolute;
-    top: 0;
-    left: 15px;
   }
   position: relative;
 }

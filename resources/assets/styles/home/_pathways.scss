@@ -1,4 +1,5 @@
 .pathways {
+  transition: $transition;
   margin-bottom: 125px;
   hr {
     margin-bottom: 50px;
@@ -6,10 +7,10 @@
     border-color: #e7e7e7;
   }
   .headline {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rajdhani", sans-serif;
     text-transform: uppercase;
     font-weight: 400;
-    color: #153355;
+    color: #434343;
     font-size: 20px;
   }
   .a-button {
@@ -19,18 +20,36 @@
       margin-bottom: 30px;
     }
     .wrapper {
-      margin-right: 30px;
       @media (max-width: 575px) {
         margin-right: 0;
       }
+      .button-wrapper {
+        text-align: center;
+        display: block;
+        margin-top: 10px;
+        .button {
+          font-family: "Rajdhani", sans-serif;
+          color: #00c0b0;
+          font-size: 16px;
+          font-weight: 600 !important;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          transition: $transition;
+        }
+      }
+      &.hovered {
+        .button {
+          color: #d5bd4f !important;
+        }
+        .content {
+          &::after {
+            background: #d5bd4f;
+          }
+        }
+      }
       > a {
-        border: 1px solid #e7e7e7 !important;
-        height: 100%;
-        display: flex;
-        align-items: flex-end;
+        height: auto;
         padding-bottom: 30px;
-        padding-left: 50px;
-        padding-right: 50px;
         @media (max-width: 1200px) {
           padding-left: 20px;
         }
@@ -39,20 +58,77 @@
         &:hover {
           text-decoration: none;
         }
+
         span {
-          z-index: 2;
           .content {
-            font-family: "Rubik", sans-serif;
+            position: relative;
+            &::after {
+              content: "";
+              width: 100%;
+              height: 3px;
+              background: #00c0b0;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              transition: $transition;
+            }
+          }
+          max-width: 100%;
+          z-index: 2;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          picture {
+            position: relative;
+            &::after {
+              content: "\f2ec";
+              font-family: "Font Awesome 5 Pro";
+              color: white;
+              position: absolute;
+              bottom: -10px;
+              font-weight: 600;
+              left: 50%;
+              font-size: 20px;
+              transform: translateX(-50%);
+              z-index: 3;
+            }
+            img {
+              max-width: 100%;
+              position: relative;
+            }
+          }
+          .content {
+            font-family: "Rajdhani", sans-serif;
             font-size: 32px;
-            color: #153355;
+            color: #434343;
+            text-transform: uppercase;
             font-weight: 600;
+            letter-spacing: 2.5px;
             line-height: 35px;
-            min-height: 70px;
             z-index: 2;
+            text-align: center;
+            display: inline-block;
+            margin: 0 auto;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
             @media (max-width: 991px) {
               font-size: 18px;
               line-height: 23px;
             }
+            position: relative;
+          }
+          .excerpt {
+            text-align: center;
+            color: black;
+            font-family: "Roboto", sans-serif;
+            line-height: 33px;
+            margin-bottom: 0;
+            font-weight: 400;
+            color: #333333;
+            font-size: 18px;
+            line-height: 30px;
           }
         }
       }
@@ -120,14 +196,14 @@
   }
 
   .pathways .a-button:nth-child(1) {
-    padding-right: 30px;
+    padding-right: 0;
   }
 
   .pathways .a-button:nth-child(2) {
-    padding-right: 15px;
+    padding-right: 0;
   }
 
   .pathways .a-button:nth-child(3) {
-    padding-left: 15px;
+    padding-left: 0x;
   }
 }
