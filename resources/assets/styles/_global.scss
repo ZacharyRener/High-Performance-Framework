@@ -152,23 +152,56 @@ body:not(.home) {
 }
 
 body.home {
-    .team-box > a::after, .team-box:nth-child(3) > h5 a::after {
-        content: "\f324";
-        font-family: 'Font Awesome 5 Pro';
-        font-size: 7px;
-        height: 100%;
-        position: relative;
-        left: 0px;
-        bottom: 1px;
-    }
+  .team-box > a::after,
+  .team-box:nth-child(3) > h5 a::after {
+    content: "\f324";
+    font-family: "Font Awesome 5 Pro";
+    font-size: 7px;
+    height: 100%;
+    position: relative;
+    left: 0px;
+    bottom: 1px;
+  }
 }
 
-@media(max-width:1000px){
-    body {
-        overflow-x: hidden;
-    }
-    body.page-id-668 .gform_wrapper.gravity-theme .gfield input.medium, .gform_wrapper.gravity-theme .gfield select.medium {
-        width: 100% !important;
-    }
-    #header #primary-nav #mobile-menu > div > ul {position: relative;height: 80vh;overflow-y: scroll;top: 5vh;}
+@media (max-width: 1000px) {
+  body {
+    overflow-x: hidden;
+  }
+  body.page-id-668 .gform_wrapper.gravity-theme .gfield input.medium,
+  .gform_wrapper.gravity-theme .gfield select.medium {
+    width: 100% !important;
+  }
+  #header #primary-nav #mobile-menu > div > ul {
+    position: relative;
+    height: 80vh;
+    overflow-y: scroll;
+    top: 5vh;
+  }
+}
+
+@media (max-width: 575px) {
+  .home .slide-txt {
+    width: 100% !important;
+    height: 84% !important;
+    top: 59% !important;
+    padding-left: 25px !important;
+  }
+
+  .home .owl-controls.clickable {
+    left: 40px !important;
+  }
+  .col-sm-12.a-e-p-buttons.row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
+
+  .pathways .a-button {
+    height: auto !important;
+  }
+
+  section#home-offers {
+    padding-top: 0 !important;
+  }
 }
