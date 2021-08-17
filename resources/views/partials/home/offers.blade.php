@@ -26,7 +26,7 @@
             @if($counter < 3)
 
             <div class="col-sm-12 col-md-4 team-box">
-                <h5><a href='#'>{{ $dynamic_offer_title }}</a></h5>
+                <h5><a href='#'>{{ $dynamic_offer_title }} </a></h5>
                 <div class="our-team-box blog-box" style="background-color: {{ $custom_bg }}">
                     <div>
                         
