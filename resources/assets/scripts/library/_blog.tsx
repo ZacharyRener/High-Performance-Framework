@@ -340,7 +340,9 @@ export default class Blog extends Component<AppProps, AppState> {
               );
             };
 
-            const date = new Date(post.date).toISOString().slice(0, 10);
+            var options = { year: 'numeric', month: 'long', day: 'numeric' };
+            // @ts-ignore
+            const date = new Date(post.date).toLocaleDateString("en-US", options);
             //console.log(post);
             //console.log(id);
             return (
