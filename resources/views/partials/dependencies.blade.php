@@ -29,3 +29,6 @@
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.0.0/css/font-awesome.min.css" integrity="sha512-88YM0a2suhl7CXiBkrltShr4/SOnraIDbB23mo1PT4XXksvf7MlKLdcxSoHlx/kfHdVQkYbzh2rNkHwfxfiqAA==" crossorigin="anonymous" />
 <script src="{{ $theme_url }}/assets/dist/main.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
