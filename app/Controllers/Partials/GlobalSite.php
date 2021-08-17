@@ -12,6 +12,7 @@ trait GlobalSite {
         $newsParentId = 520;
         $projectParentId = 480;
         $postParentId = 649;
+        $searchParentId = $postParentId;
 
         $parentId = wp_get_post_parent_id(get_the_ID()) == 0
             ? get_the_ID() 
@@ -30,6 +31,9 @@ trait GlobalSite {
 
         if(get_post_type() == "post" || get_post_type() == 'library')
             $parentId = $postParentId;   
+
+        if(is_search())
+            $parentId = $searchParentId;
 
         return $parentId;
         
