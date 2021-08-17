@@ -30,11 +30,9 @@ export default class Home {
   runAnimation(selector) {
     new TypeIt(selector, {
       speed: 100,
-      loop: true,
+      loop: false,
     })
-      .pause(5000)
       .go()
-      .pause(1000);
   }
 
   addTypeAnimation() {
