@@ -108,7 +108,7 @@ $transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
     input[type="text"],
     input[type="email"],
     textarea {
-      border: 2px solid #d9d9d9 !important;
+      border: 1px solid #d9d9d9 !important;
       padding-left: 15px;
       border-radius: 2px;
       &,
@@ -203,5 +203,20 @@ body.home {
 
   section#home-offers {
     padding-top: 0 !important;
+  }
+}
+
+svg#_x22_logo_x22__1_ {
+  width: 211px;
+  height: 72px;
+}
+
+.dropdown-menu-wrapper {
+  top: 85px !important;
+}
+
+@media (min-width: 765px) {
+  .home .excerpt {
+    padding: 0 40px;
   }
 }

@@ -82,16 +82,21 @@
           picture {
             position: relative;
             &::after {
-              content: "\f2ec";
+              content: "";
               font-family: "Font Awesome 5 Pro";
               color: white;
               position: absolute;
-              bottom: -10px;
+              bottom: 0px;
               font-weight: 600;
               left: 50%;
               font-size: 20px;
               transform: translateX(-50%);
               z-index: 3;
+              width: 0px;
+              height: 0;
+              border-left: 10px solid transparent;
+              border-right: 10px solid transparent;
+              border-bottom: 13px solid white;
             }
             img {
               max-width: 100%;
