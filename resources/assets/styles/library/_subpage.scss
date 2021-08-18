@@ -1007,10 +1007,6 @@ a:hover {
     border: none;
   }
 
-  h1 {
-    margin-bottom: 0 !important;
-  }
-
   button.btn.btn-link {
     padding: 0 !important;
   }
@@ -1089,10 +1085,10 @@ body:not(.home) .col-md-3.col-sm-4 {
 body:not(.home) .col-md-3.col-sm-4::before {
   content: "";
   height: 100%;
-  width: 100%;
+  width: 100vw;
   background: #f3f3f3;
   position: absolute;
-  left: -100%;
+  left: -100vw;
   top: 0;
 }
 
@@ -1165,7 +1161,6 @@ body:not(.home) .col-md-3.col-sm-4::after {
   }
   h1 {
     font-family: "Rajdhani", sans-serif !important;
-    font-size: 30px !important;
     color: black !important;
   }
   .card-header i {
@@ -1188,4 +1183,46 @@ a.section-title-custom {
 
 .column:nth-child(1) {
   max-width: 120px;
+}
+
+@media (min-width: 768px) {
+  .home {
+    picture {
+      width: 100%;
+    }
+
+    picture img {
+      width: 100%;
+      max-height: 243px;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body:not(.home) .banner {
+    margin-top: 136px;
+  }
+  .home {
+    a.button.arrow.red {
+      bottom: -50px !important;
+    }
+
+    .our-team-box.blog-box {
+      padding-bottom: 0 !important;
+    }
+
+    section#home-offers .team-box:nth-last-child(1) {
+      margin-bottom: 0 !important;
+    }
+
+    section#home-offers {
+      padding-bottom: 30px !important;
+    }
+
+    textarea#input_4_6 {
+      height: 189px !important;
+    }
+  }
 }

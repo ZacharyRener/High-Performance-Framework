@@ -27,24 +27,39 @@ export default class Home {
     this.handlePathwayHover();
   }
 
-  runAnimation(selector) {
-    new TypeIt(selector, {
-      speed: 100,
-      loop: false,
-    })
-      .go()
-  }
-
   addTypeAnimation() {
-    setTimeout(() => {
-      const amountOfSlides = document.querySelectorAll(
-        ".home-slider .owl-item"
-      ).length;
-      console.log(amountOfSlides);
-      for (let i = 1; i <= amountOfSlides; i++) {
-        this.runAnimation(`.home-slider .owl-item:nth-child(${i}) h2`);
+    let interval;
+    const slides = document.querySelectorAll(
+      ".home-slider .owl-carousel .slide-txt h2"
+    );
+
+    // If we can see the h2, start typing.
+    // Once we can no longer see that h2, stop typing.
+
+    interval = setInterval(() => {
+      if (document.querySelector(".owl-wrapper").style.transform != null) {
+        slides.forEach((slide) => {
+          let typeIt = new TypeIt(slide);
+          let innerInterval = setInterval(() => {
+            if (isInViewport(slide) && typeIt.is("started") == false) {
+              typeIt.reset();
+              typeIt.go();
+            } else if (isInViewport(slide) == false) {
+              typeIt.reset();
+            }
+          }, 100);
+        });
+        clearInterval(interval);
       }
-    }, 1000);
+    }, 500);
+
+    // Check if we can see the h2
+
+    // Start Typing
+
+    // Check if we can't see the h2
+
+    // Stop typing
   }
 
   renderSlickCarousel() {
