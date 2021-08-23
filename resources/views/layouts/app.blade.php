@@ -18,9 +18,7 @@
                         <div class='row'>
                             @yield('content')
                         </div>
-                        @if(get_post_type()=='post')
-                            @include('partials.single.popular-posts')
-                        @endif
+                        
                     </div>
                 </section>
             </div>

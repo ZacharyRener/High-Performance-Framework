@@ -32,24 +32,21 @@
                 <p><strong class='mb-0 mt-5'>Apply Now:</strong></p>
                 {!! do_shortcode('[gravityforms id=4 title=false]') !!}
             @endif
-            @if(get_post_type() == 'news' || get_post_type() == 'post')
-                <strong class='share'>Share</strong>
-                {!! do_shortcode('[addtoany]') !!}
-            @endif
+            
             @if(get_post_type() == 'post' && $assign_this_to_a_team_member)
-                <section class='about-author'>
-                    <div class='image'>
-                        <img class='author-image' src='{{get_the_post_thumbnail_url($team_member)}}'>
+                <div class="featured-content-wrapper sidebar-box">
+                    <div class="featured-content">
+                        <div class="col-xs-12">       
+                            <div class="fpo-img pull-left">
+                                <img src="{{get_the_post_thumbnail_url($team_member)}}" style="margin-bottom: 30px;">
+                            </div>
+                            <p>
+                                <strong>About The Author</strong>
+                                {{strip_tags(get_the_excerpt($team_member))}}
+                            </p>              
+                        </div>
                     </div>
-                    <div class='content-side'>
-                        <span class='name'>
-                            <a href='{{get_the_permalink($team_member)}}'>
-                                {{get_the_title($team_member)}}
-                            </a>
-                        </span>
-                        <p class='author-content'>{{strip_tags(get_the_excerpt($team_member))}}</p>
-                    </div>
-                </section>
+                </div>
             @endif
         @endwhile
     @else 
@@ -57,5 +54,15 @@
             {{ __('Sorry, but the page you were trying to view does not exist.', 'sage') }}
         </div>
         {!! get_search_form(false) !!}
+    @endif
+    
+    @if(get_post_type()=='post')
+        @include('partials.single.popular-posts')
+        <strong class='share'>Share</strong>
+        {!! do_shortcode('[addtoany]') !!}
+    @endif
+    @if(get_post_type() == 'news' || get_post_type() == 'post')
+        <strong class='share'>Share</strong>
+        {!! do_shortcode('[addtoany]') !!}
     @endif
 </div>
