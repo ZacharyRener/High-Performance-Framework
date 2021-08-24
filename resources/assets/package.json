@@ -4,7 +4,7 @@
   "description": "",
   "main": "./build/main.min.js",
   "scripts": {
-    "dev": "./node_modules/.bin/webpack --watch"
+    "dev": "cd resources/assets && ./node_modules/.bin/webpack --watch"
   },
   "repository": {
     "type": "git",
