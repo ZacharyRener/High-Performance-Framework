@@ -39,14 +39,14 @@
   }
 
   .wrapper.d-flex > div:nth-child(1) {
-    font-family: "Rubik", sans-serif;
+    font-family: $mainFont;
     font-size: 48px;
     color: #9c9c9c;
     padding-right: 10px;
   }
 
   .wrapper.d-flex > div:nth-child(2) {
-    font-family: "Rubik";
+    font-family: $mainFont;
     color: #fffefe;
     text-transform: uppercase;
     line-height: 21px;
@@ -228,7 +228,7 @@
     padding: 85px 0;
     padding-bottom: 140px;
     p.title {
-      font-family: "Rubik";
+      font-family: $mainFont;
       color: #fffefe;
       text-transform: uppercase;
       line-height: 21px;

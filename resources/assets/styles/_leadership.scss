@@ -28,7 +28,7 @@
     margin-top: 5px;
   }
   .media-box-text {
-    font-family: "Rubik", sans-serif;
+    font-family: $mainFont;
     text-transform: uppercase;
     color: #606060;
   }
@@ -41,7 +41,7 @@
   }
   .media-boxes-drop-down-header {
     background-color: transparent;
-    font-family: "Rubik", sans-serif;
+    font-family: $mainFont;
     min-width: 200px;
   }
   .filters-container {
@@ -108,7 +108,7 @@
   }
 
   .media-boxes-drop-down-header {
-    font-family: "Rubik", sans-serif;
+    font-family: $mainFont;
     color: #494949;
     font-size: 14px;
     border: 2px solid #e7e7e7;
@@ -121,7 +121,7 @@
   ul.media-boxes-drop-down-menu.filters li a {
     color: #494949;
     font-size: 14px;
-    font-family: "Rubik", sans-serif;
+    font-family: $mainFont;
   }
   @media (max-width: 992px) {
     #grid {
@@ -151,12 +151,12 @@
     color: #000000;
     font-size: 40px !important;
     text-transform: uppercase;
-    font-family: "Rubik", sans-serif;
+    font-family: $mainFont;
     letter-spacing: 1px;
   }
 
   .leader-title {
-    font-family: "Rubik", sans-serif;
+    font-family: $mainFont;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #6d6d6d;

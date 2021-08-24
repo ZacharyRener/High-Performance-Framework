@@ -33,7 +33,7 @@
     width: auto !important;
   }
   p.small-headline {
-    font-family: "Rubik", sans-serif;
+    font-family: $mainFont;
     color: white;
     text-transform: uppercase;
     font-weight: 300;
@@ -41,7 +41,7 @@
   }
 
   p.large-excerpt {
-    font-family: "Rubik", sans-serif;
+    font-family: $mainFont;
     color: white;
     font-weight: 600;
     font-size: 34px;

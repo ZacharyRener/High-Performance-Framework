@@ -20,7 +20,7 @@
   }
 
   p.title {
-    font-family: "Rubik";
+    font-family: $mainFont;
     color: #650000;
     text-transform: uppercase;
     line-height: 21px;
@@ -68,7 +68,7 @@
     position: absolute;
     top: 20px;
     left: 20px;
-    font-family: "Rubik";
+    font-family: $mainFont;
     color: white;
     text-transform: uppercase;
     font-size: 15px;

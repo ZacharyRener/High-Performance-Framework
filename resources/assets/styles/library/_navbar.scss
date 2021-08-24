@@ -1,23 +1,23 @@
 /* ============================================================== *
  * Utility Menu Colors                                            *
  * ============================================================== */
-$utility__background: #494949;
-$utility__social__static-color: #b7b8bb;
-$utility__social__hover-color: #ddd;
-$utility__menu__static-color: #a8a8a8;
+$utility__background: #f1f1f1;
+$utility__social__static-color: #333333;
+$utility__social__hover-color: black;
+$utility__menu__static-color: #333333;
 $utility__menu__hover-color: black;
 $utility__menu__font: $mainFont;
 $utility__menu__font-size: 0.85rem;
 $utility__menu__text-transform: uppercase;
 $utility__menu__font-weight: 400;
-$utility__search__background: #606060;
-$utility__search__color: white;
+$utility__search__background: #cccccc;
+$utility__search__color: #000000;
 /* ============================================================== *
    * Primary Navigation Colors                                      *
    * ============================================================== */
-$primary__background: rgba(255, 255, 255, 0.95);
-$primary__nav__color-hover: #3d3d3d;
-$primary__nav__color-static: #3d3d3d;
+$primary__background: rgba(255, 255, 255, 0);
+$primary__nav__color-hover: white;
+$primary__nav__color-static: white;
 $primary__nav__font: $mainFont;
 $primary__nav__font-size: 0.5rem;
 $primary__nav__text-transform: uppercase;
@@ -26,7 +26,7 @@ $primary__sub-menu__background-static: #323b3e;
 $primary__sub-menu__font: "Open Sans", sans-serif;
 $primary__sub-menu__font-size: 0.8rem;
 $primary__sub-menu__text-transform: uppercase;
-$primary__sub-menu__font-weight: 500;
+$primary__sub-menu__font-weight: 400;
 $primary__sub-menu__background-hover: #00a2c8;
 /* ============================================================== *
    * Mobile Menu Colors                                             *
@@ -326,7 +326,7 @@ nav#primary {
 }
 
 .top-level-nav-item > a {
-  color: #3d3d3d;
+  color: $primary__nav__color-static;
   padding: 0 20px;
   padding-bottom: 15px;
   text-decoration: none;
@@ -334,7 +334,7 @@ nav#primary {
   font-weight: 400;
   letter-spacing: 1px !important;
   text-transform: uppercase;
-  font-family: "Rubik", sans-serif;
+  font-family: $mainFont;
 }
 
 a.section-title-custom {
@@ -348,7 +348,7 @@ a.section-title-custom {
   font-weight: 400;
   letter-spacing: normal !important;
   text-transform: none;
-  font-family: "Rubik", sans-serif;
+  font-family: $mainFont;
 }
 
 a.sub-menu-link {
@@ -410,7 +410,7 @@ nav#primary {
 .top-level-nav-item > a {
   text-decoration: none;
   &:hover {
-    color: inherit !important;
+    color: $primary__nav__color-hover !important;
     text-decoration: none !important;
   }
 }
@@ -503,7 +503,6 @@ a.section-title-custom {
   }
 
   i.fab.fa-linkedin-in {
-    color: white;
     font-size: 14px !important;
   }
 

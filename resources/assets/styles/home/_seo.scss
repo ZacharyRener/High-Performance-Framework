@@ -10,7 +10,7 @@ section.body-section.seo-copy {
   }
 
   h1 {
-    font-family: "Rubik";
+    font-family: $mainFont;
     color: #f06944;
     font-size: 47px;
     font-weight: 600;
@@ -23,7 +23,7 @@ section.body-section.seo-copy {
 
   p {
     color: #272727;
-    font-family: "Rubik", sans-serif;
+    font-family: $mainFont;
     margin-bottom: 30px;
   }
 
