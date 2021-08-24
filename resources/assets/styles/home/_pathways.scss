@@ -6,7 +6,7 @@
     border-color: #e7e7e7;
   }
   .headline {
-    font-family: "Rubik", sans-serif;
+    font-family: $mainFont;
     text-transform: uppercase;
     font-weight: 400;
     color: #153355;
@@ -42,7 +42,7 @@
         span {
           z-index: 2;
           .content {
-            font-family: "Rubik", sans-serif;
+            font-family: $mainFont;
             font-size: 32px;
             color: #153355;
             font-weight: 600;
