@@ -345,3 +345,13 @@ body.single-leadership {
     padding-left: 0;
   }
 }
+
+body.single-leadership #accordion .card .card-header a::after {
+  content: url(/wp-content/uploads/2021/08/plus-LIGHT-gray.png);
+  position: absolute;
+  right: 25px;
+}
+
+body.single-leadership #accordion .card .card-header a.customClose::after {
+  content: url(/wp-content/uploads/2021/08/minus-LIGHT-gray.png) !important;
+}
