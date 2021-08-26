@@ -1,7 +1,7 @@
 .home-slider {
   img.movingImg {
     width: 100%;
-    object-position: center;
+    object-position: top right;
   }
   p {
     margin-bottom: 50px !important;
@@ -47,7 +47,7 @@
       font-weight: 300;
     }
     letter-spacing: 0.025em;
-    max-width: 60%;
+    max-width: 100%;
     @media (max-width: 994px) {
       max-width: 75% !important;
     }
@@ -60,7 +60,7 @@
   .slide-txt h2 {
     text-transform: none;
     font-weight: 600;
-    color: #153355;
+    color: white;
     margin-bottom: 40px;
   }
 }
@@ -68,13 +68,21 @@
 .home {
   .slide-txt {
     position: absolute;
-    bottom: 15%;
+    top: 25%;
+    right: 0 !important;
+    width: 50%;
+    padding-right:0 !important;
     @include phone {
       top: 50%;
       transform: translateY(-50%);
     }
+    p {
+        color: white;
+        padding-left: 10%;
+    }
     a {
       @include button;
+      margin-left: 10%;
     }
   }
 

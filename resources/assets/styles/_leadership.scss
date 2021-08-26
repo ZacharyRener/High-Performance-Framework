@@ -18,14 +18,15 @@
   }
 
   .media-box-title.searchtitle {
-    color: #272727;
+    color: #4d4d4d;
     font-size: 18px;
   }
 
   .media-box-text.searchtitle {
-    color: #272727;
+    color: #182883;
     font-size: 14px;
     margin-top: 5px;
+    font-weight: 700;
   }
   .media-box-text {
     font-family: $mainFont;
@@ -79,11 +80,11 @@
     transition: $transition;
   }
   .media-box-container {
-    border-radius: 0 !important;
+    border-radius: 4px !important;
   }
   .media-box-logo {
     position: relative;
-    border-radius: 0 !important;
+    border-radius: 4px !important;
   }
   .media-box img {
     transform: none !important;
@@ -270,11 +271,16 @@
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 15px;
+    padding-left: 0 !important;
   }
 
   .social-share li a {
-    background: #33a6ef;
+    background: #444444;
+    &:hover {
+      background: #182883 !important;
+    }
+    border-radius: 3px !important;
     color: white;
     width: 100%;
     height: 100%;
@@ -285,18 +291,19 @@
   }
 
   .social-share li {
-    width: 50px;
-    height: 50px;
-    background: #33a6ef;
+    width: 38px;
+    height: 38px;
+    background: #444444;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin-right: 10px;
+    border-radius: 4px !important;
   }
 
   .social-share i {
-    font-size: 26px;
+    font-size: 18px;
   }
 
   @media (max-width: 992px) {
@@ -313,4 +320,68 @@
       margin-top: 0 !important;
     }
   }
+}
+
+.single-leadership {
+  h1.leader-name {
+    font-size: 42px !important;
+    margin-bottom: 5px !important;
+  }
+
+  h2.leader-title {
+    color: #182883 !important;
+    font-weight: 700 !important;
+    font-size: 19px !important;
+    letter-spacing: 1.1px !important;
+    margin-bottom: 30px !important;
+  }
+  .card-header {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+  }
+
+  .card {
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 22px;
+    padding-top: 22px;
+    border-radius: 0 !important;
+  }
+
+  .card-header a {
+    color: #182883 !important;
+    font-family: "Arimo";
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+  }
+
+  .card-body {
+    padding-left: 20px;
+  }
+
+  .card-body ul {
+    padding-left: 0;
+    list-style-position: outside;
+  }
+
+  .col-md-12.accordion-wrapper {
+    padding-left: 0;
+  }
+
+  .card-header > h5 {
+    margin-top: 0 !important;
+  }
+}
+
+body.single-leadership #accordion .card .card-header a::after {
+  content: url(/wp-content/uploads/2021/08/greenplus.png);
+  position: absolute;
+  right: 25px;
+}
+
+body.single-leadership #accordion .card .card-header a.customClose::after {
+  content: url(/wp-content/uploads/2021/08/greenminus.png) !important;
 }

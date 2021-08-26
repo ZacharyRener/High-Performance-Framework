@@ -64,3 +64,34 @@
     margin-top: 20px;
   }
 }
+
+p.section-header {
+  font-family: "Arimo";
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.section-wrapper {
+  text-align: left !important;
+}
+
+.fa-caret-right:before {
+  content: "\f324" !important;
+}
+
+.fa-caret-left:before {
+  content: "\f323" !important;
+}
+
+i.fa.fa-caret-right,
+.fa-caret-left {
+  color: #828282;
+  font-size: 27px;
+  font-weight: 500 !important;
+}
+
+.owl-next,
+.owl-prev {
+  background: transparent !important;
+}
