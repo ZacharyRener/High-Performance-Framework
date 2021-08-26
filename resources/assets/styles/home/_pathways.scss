@@ -131,3 +131,44 @@
     padding-left: 15px;
   }
 }
+
+.pathway-wrapper {
+  padding: 50px 0;
+}
+
+.small-headline {
+  font-family: $mainFont;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  margin-bottom: 50px;
+}
+
+.home .pathway .content {
+  font-size: 28px;
+  color: white;
+  font-family: $mainFont;
+  margin-bottom: 40px;
+  background: transparent;
+  padding: 10px 20px !important;
+  border-radius: 0px;
+  border-left: 2px solid white;
+  transition: $transition;
+  display: inline-block;
+}
+
+.home .pathway .content:hover {
+  border-radius: 4px;
+  color: #01b8bf;
+  background: white;
+}
+
+.col-sm-12.a-e-p-buttons.row {
+  padding-left: 50px !important;
+}
+
+.pathways {
+  margin-bottom: 0 !important;
+}

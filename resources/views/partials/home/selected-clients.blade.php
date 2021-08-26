@@ -7,16 +7,19 @@
     @endphp
 
     <section class="clients-section" style="background-color: {{ $clients_bg }}">
-        <div class="section-wrapper">
-            <p class="section-header">
-                @if( !empty($clients_title ) ) 
-                    {{ $clients_title }}
-                @else 
-                    {{ "Select Clients" }}
-                @endif
-            </p>
-        </div>
+        
         <div class="container">
+
+            <div class="section-wrapper">
+                <p class="section-header">
+                    @if( !empty($clients_title ) ) 
+                        {{ $clients_title }}
+                    @else 
+                        {{ "Selected Clients" }}
+                    @endif
+                </p>
+            </div>
+
             <div class="col-sm-12 client-slider">
                 <div class="owl-carousel-clients" <?php if(get_field('title_border') == '2' ) { echo 'style="border-top: 0px !important;"'; } ?>>
 					

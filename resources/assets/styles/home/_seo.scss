@@ -1,5 +1,5 @@
 section.body-section.seo-copy {
-  background-image: url(/wp-content/uploads/2021/06/seo-copy-bg.png);
+  background-image: url(/wp-content/uploads/2021/08/Levels-1.png);
   padding-top: 88px;
   padding-bottom: 88px;
   background-size: cover;
@@ -11,18 +11,18 @@ section.body-section.seo-copy {
 
   h1 {
     font-family: $mainFont;
-    color: #f06944;
+    color: white;
     font-size: 47px;
     font-weight: 600;
     margin-bottom: 40px;
-    max-width: 70%;
+
     @media (max-width: 1000px) {
       max-width: 100%;
     }
   }
 
   p {
-    color: #272727;
+    color: white;
     font-family: $mainFont;
     margin-bottom: 30px;
   }

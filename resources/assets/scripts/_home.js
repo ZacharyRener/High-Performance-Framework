@@ -20,8 +20,24 @@ export default class Home {
     this.handleHiddenHover(".project");
     this.handleHiddenHover(".solution");
     this.matchOfferHeights();
-    this.handleIndustryHover();
-    this.renderSlickCarousel();
+    this.handlePathwaysHover();
+  }
+
+  handlePathwaysHover() {
+    document.querySelectorAll(".pathway .content").forEach((content) => {
+      content.addEventListener("mouseover", (e) => {
+        let parent =
+          e.currentTarget.parentElement.parentElement.parentElement
+            .parentElement.parentElement.parentElement.parentElement;
+        parent.classList.toggle(e.currentTarget.getAttribute("hover-bg"));
+      });
+      content.addEventListener("mouseleave", (e) => {
+        let parent =
+          e.currentTarget.parentElement.parentElement.parentElement
+            .parentElement.parentElement.parentElement.parentElement;
+        parent.classList.toggle(e.currentTarget.getAttribute("hover-bg"));
+      });
+    });
   }
 
   renderSlickCarousel() {

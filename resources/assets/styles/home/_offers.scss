@@ -1,6 +1,9 @@
 section#home-offers {
   padding-bottom: 125px;
   padding-top: 100px;
+  background: url(/wp-content/uploads/2021/08/Rectangle-19-copy-14.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   .team-box > a,
   .team-box > h5 a {
     color: black;
@@ -25,10 +28,11 @@ section#home-offers {
     text-decoration: none;
   }
   .blog-box {
-    background: #26486e;
+    background: #44529e;
     margin-top: 7px;
-    padding: 40px 40px;
-    border-bottom: 10px solid #33a6ef;
+    padding: 25px 30px;
+    padding-bottom: 50px;
+
     a.button {
       font-family: $mainFont;
       text-transform: uppercase;
@@ -97,8 +101,19 @@ section#home-offers {
     }
   }
 
-  .our-team-box:not(.blog-box) a.button.arrow.red {
+  .our-team-box:not(.blog-box123) a.button.arrow.red {
     @include button;
+    font-weight: 600;
+    border-width: 2px;
+  }
+
+  .our-team-box:not(.blog-box) a.button.arrow.red {
+    border-color: #273890 !important;
+    color: #273890 !important;
+    &:hover {
+      background: #273890 !important;
+      color: white !important;
+    }
   }
 
   .our-team-box {
@@ -106,11 +121,11 @@ section#home-offers {
   }
   h6 a {
     color: black;
-    font-weight: 600;
+    font-weight: 300;
   }
 
   h6 {
-    font-family: "Open Sans", sans-serif;
+    font-family: $mainFont;
   }
 
   span.datentime {
@@ -118,6 +133,7 @@ section#home-offers {
     margin-top: 0;
     line-height: 7px;
     color: white;
+    font-family: $mainFont;
   }
   .our-team-box.blog-box {
     height: 100%;
@@ -181,4 +197,42 @@ section#home-offers {
       padding-left: 15px !important;
     }
   }
+}
+
+.team-box > a,
+.team-box > h5 a {
+  color: #42519c !important;
+}
+
+section#home-offers .team-box img {
+  border-bottom: none !important;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 214px !important;
+  object-fit: cover;
+}
+
+.our-team-box span strong {
+  color: #273890;
+  font-family: "Arimo", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 0 !important;
+}
+
+.our-team-box p {
+  font-size: 14px;
+}
+
+section#home-offers .our-team-box:not(.blog-box) a.button.arrow.red {
+  border-color: #273890 !important;
+  color: #273890 !important;
+}
+
+.col-sm-12.row.b-t-p-section {
+  align-items: flex-start !important;
+}
+
+.our-team-box.blog-box {
+  border-radius: 5px;
 }
