@@ -2,7 +2,14 @@
     @include('partials.subpage.sticky-sections')
     @if(have_posts())
         @while(have_posts()) @php the_post(); @endphp
-            @if(get_post_type() == 'news' || get_post_type() == 'post')
+            @if(get_post_type() == 'news')
+                
+                @if(has_post_thumbnail())
+                {!! get_the_post_thumbnail() !!}
+                @endif
+
+            @endif
+            @if(get_post_type() == 'post')
                 <h1>{!! get_the_title() !!}</h1>
             @endif
             @if(get_post_type() == 'post')
@@ -11,6 +18,11 @@
                 {!! get_the_post_thumbnail() !!}
                 @endif
             @endif
+            @if(get_post_type() == 'news')
+                <h1>{!! get_the_title() !!}</h1>
+                <p class='author'>{{ get_the_date() }}</p>
+            @endif
+             
             <span class='wrapper'>@php the_content(); @endphp</span>
             @if(get_post_type() == 'post' || get_post_type() == 'news')
                 @php
