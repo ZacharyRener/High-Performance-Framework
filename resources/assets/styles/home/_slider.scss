@@ -27,10 +27,12 @@
   }
   .owl-controls {
     position: absolute;
-    bottom: calc(15% + 175px);
+    bottom: 45%;
     width: 100%;
+    transform: translateY(-50%);
     @media (max-width: 768px) {
       bottom: 60px;
+      transform: none !important;
     }
   }
 
@@ -87,8 +89,9 @@
 .home {
   .slide-txt {
     position: absolute;
-    bottom: 15%;
+    top: 50%;
     margin-left: 100px;
+    transform: translateY(-50%);
     @media (max-width: 992px) {
       margin-left: 0;
     }
@@ -123,5 +126,11 @@
   .slide-vid source {
     width: 100%;
     object-fit: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  section#home-offers {
+    padding-bottom: 75px !important;
   }
 }

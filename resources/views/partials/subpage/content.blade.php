@@ -2,11 +2,17 @@
     @include('partials.subpage.sticky-sections')
     @if(have_posts())
         @while(have_posts()) @php the_post(); @endphp
-            @if(get_post_type() == 'news' || get_post_type() == 'post')
+            @if(get_post_type() == 'news' || get_post_type() == 'post' || get_post_type() == 'position')
                 <h1>{!! get_the_title() !!}</h1>
             @endif
             @if(get_post_type() == 'post')
-                <p class='author'>{{ get_the_date() }}<span class='divider'>|</span>{{get_the_author()}}</p>
+                @php
+                $author = get_the_author();
+                if(get_field('team_member')){
+                    $author = get_the_title(get_field('team_member'));
+                }
+                @endphp
+                <p class='author'>{{ get_the_date() }}<span class='divider'>|</span>{{$author}}</p>
                 @if(has_post_thumbnail())
                 {!! get_the_post_thumbnail() !!}
                 @endif
@@ -42,7 +48,7 @@
                             </div>
                             <p>
                                 <strong>About The Author</strong>
-                                {{strip_tags(get_the_excerpt($team_member))}}
+                                {!!strip_tags(get_the_excerpt($team_member))!!}
                             </p>              
                         </div>
                     </div>
@@ -61,7 +67,7 @@
         <strong class='share'>Share</strong>
         {!! do_shortcode('[addtoany]') !!}
     @endif
-    @if(get_post_type() == 'news' || get_post_type() == 'post')
+    @if(get_post_type() == 'news')
         <strong class='share'>Share</strong>
         {!! do_shortcode('[addtoany]') !!}
     @endif

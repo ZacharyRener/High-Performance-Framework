@@ -312,7 +312,7 @@ body:not(.home) {
     }
     .about-body {
       ul {
-        list-style-position: inside;
+        list-style-position: outside;
       }
       li {
         @extend p;

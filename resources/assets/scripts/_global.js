@@ -3,6 +3,19 @@ export default class Global {
     this.handleTrayMenu();
     this.handleLeftNavHover();
     //if (window.innerWidth > 768) this.makeOffersSticky();
+    this.handleChangeOnScroll();
+  }
+
+  handleChangeOnScroll() {
+    document.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        document.querySelector("section#primary-nav").classList.add("scrolled");
+      } else {
+        document
+          .querySelector("section#primary-nav")
+          .classList.remove("scrolled");
+      }
+    });
   }
 
   handleTrayMenu() {
@@ -17,6 +30,13 @@ export default class Global {
           e.currentTarget.children[1].children[0].classList.add("hidden");
         });
       });
+
+    if (jQuery(".sub-menu.hidden .active")) {
+      jQuery(".sub-menu.hidden .active")
+        .parent()
+        .parent()
+        .toggleClass("hidden");
+    }
   }
 
   handleLeftNavHover() {

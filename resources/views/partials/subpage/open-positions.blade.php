@@ -4,7 +4,7 @@
     @while($job_positions->have_posts()) @php $job_positions->the_post(); @endphp
 
         <div class='position'>
-            <a href='{{ get_the_permalink() }}'><p class='title'>{{ get_the_title() }}</p></a>
+            <a href='{{ get_the_permalink() }}'><p class='title'>{!! get_the_title() !!}</p></a>
             <p class='excerpt'>{{ App::getSnippet(get_the_excerpt(), 50) }}</p>
             <a href='{{ get_the_permalink() }}' class='button'>Learn More</a>
         </div>

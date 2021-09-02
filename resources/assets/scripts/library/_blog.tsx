@@ -344,9 +344,8 @@ export default class Blog extends Component<AppProps, AppState> {
 
           {this.state.posts.map((post, id) => {
             const image = () => {
-              const hasMedia: boolean = post._embedded.hasOwnProperty(
-                "wp:featuredmedia"
-              );
+              const hasMedia: boolean =
+                post._embedded.hasOwnProperty("wp:featuredmedia");
               const hasImage: boolean = hasMedia
                 ? post._embedded["wp:featuredmedia"][0].hasOwnProperty(
                     "source_url"
@@ -361,6 +360,15 @@ export default class Blog extends Component<AppProps, AppState> {
               );
             };
 
+            const memberName = (teamId) => {
+              fetch(`/wp-json/wp/v2/leadership/${teamId}`)
+                .then((response) => response.json())
+                .then((data) => {
+                  console.log(data.title.rendered);
+                  return data.title.rendered;
+                });
+            };
+
             const date = new Date(post.date).toISOString().slice(0, 10);
             //console.log(post);
             //console.log(id);
@@ -370,11 +378,14 @@ export default class Blog extends Component<AppProps, AppState> {
                 <div className="post-footer">
                   <div className="date">{date}</div>
                 </div>
-                <a href={post.link}>{post.title.rendered}</a>
-                <div
-                  className="excerpt"
-                  dangerouslySetInnerHTML={{ __html: post._embedded['author'][0].name }}
-                />
+                <a
+                  dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+                  href={post.link}
+                ></a>
+                <div className="excerpt">
+                  {/*@ts-ignore */}
+                  {memberName(post.acf.team_member)}
+                </div>
               </div>
             );
           })}

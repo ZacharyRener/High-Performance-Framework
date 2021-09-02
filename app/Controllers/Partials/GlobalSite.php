@@ -29,7 +29,7 @@ trait GlobalSite {
         if(get_post_type() == "project")
             $parentId = $projectParentId;
 
-        if(get_post_type() == "post" || get_post_type() == 'library')
+        if(get_post_type() == "post" || get_post_type() == 'library' || is_search())
             $parentId = $postParentId;   
 
         if(get_post_type() == "position")
@@ -53,8 +53,18 @@ trait GlobalSite {
         $postParentId = 649;
         $careersParentId = 760;
 
-        $parentId = wp_get_post_parent_id(get_the_ID()) == 0 ?
-            get_the_ID() : wp_get_post_parent_id(get_the_ID());
+        $postDoesntHaveParent = wp_get_post_parent_id(get_the_ID()) == 0;
+        if($postDoesntHaveParent){
+            $parentId = get_the_ID();
+        } else {
+            $parentDoesntHaveParent = wp_get_post_parent_id(wp_get_post_parent_id(get_the_ID())) == 0;
+            if($parentDoesntHaveParent) {
+                $parentId = wp_get_post_parent_id(get_the_ID());
+            } else {
+                $parentId = wp_get_post_parent_id(wp_get_post_parent_id(get_the_ID()));
+            }
+            
+        }
 
         if(get_post_type() == "leadership")
             $parentId = $leadershipParentId;
@@ -70,9 +80,6 @@ trait GlobalSite {
 
         if(get_post_type() == "library")
             $parentId = $libraryParentId;
-
-        if(get_post_type() == "position")
-            $parentId = $careersParentId;
 
         $mainLink = get_the_permalink($parentId);
         $mainTitle = get_the_title($parentId);
@@ -95,9 +102,7 @@ trait GlobalSite {
         else if(is_search())
                 $mainTitle = 'Search';
         $output .= "
-
         <div class='navigation'>
-
             <a href='$mainLink'>$mainTitle</a>";
             $output .= "<ul>";
             if($children):
@@ -147,7 +152,6 @@ trait GlobalSite {
             $output .= "</ul>";
         echo "
         </div>
-
         ";
 
         return $output;
