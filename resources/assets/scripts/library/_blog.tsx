@@ -344,9 +344,8 @@ export default class Blog extends Component<AppProps, AppState> {
 
           {this.state.posts.map((post, id) => {
             const image = () => {
-              const hasMedia: boolean = post._embedded.hasOwnProperty(
-                "wp:featuredmedia"
-              );
+              const hasMedia: boolean =
+                post._embedded.hasOwnProperty("wp:featuredmedia");
               const hasImage: boolean = hasMedia
                 ? post._embedded["wp:featuredmedia"][0].hasOwnProperty(
                     "source_url"
@@ -370,10 +369,15 @@ export default class Blog extends Component<AppProps, AppState> {
                 <div className="post-footer">
                   <div className="date">{date}</div>
                 </div>
-                <a href={post.link}>{post.title.rendered}</a>
+                <a
+                  href={post.link}
+                  dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+                />
                 <div
                   className="excerpt"
-                  dangerouslySetInnerHTML={{ __html: post._embedded['author'][0].name }}
+                  dangerouslySetInnerHTML={{
+                    __html: post._embedded["author"][0].name,
+                  }}
                 />
               </div>
             );

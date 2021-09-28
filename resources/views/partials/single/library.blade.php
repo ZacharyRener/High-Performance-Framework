@@ -1,6 +1,6 @@
 <?php
 
-    $isVideo = has_term('videos', 'library_category');
+    $isVideo = has_term('webinar', 'library_category');
 
 ?>
 

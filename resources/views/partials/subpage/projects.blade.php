@@ -6,16 +6,7 @@
             <div class="">
 
                 <div class='body-txt container about-body'>
-                    <?php
-                    if(have_posts()):
-                        while(have_posts()): the_post();
-                            
-
-                            the_content();
-                            
-                        endwhile;
-                    endif;
-                    ?>
+                    
                 </div>
 
                 <div class="project-filter" style="padding: 10px 20px 10px 20px; margin-bottom: 50px;">
@@ -172,7 +163,7 @@
                                     <!-- photo -->
                                     <div class="jpt-box">
                                         <?php echo get_the_post_thumbnail(); ?>
-                                        <?php if($project_types && sizeof($project_types) > 0): ?>
+                                        <?php if($project_types): ?>
                                         <div class="jpt-box-child">
                                               <h6 class="searchtitle"><?php echo $project_types; ?></h6>
                                             </div>

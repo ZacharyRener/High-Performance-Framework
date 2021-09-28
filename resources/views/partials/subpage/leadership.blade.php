@@ -1,7 +1,8 @@
 <div class="col-md-8 col-md-offset-1 col-sm-8 body-txt pull-right about-body">
+    {!! apply_filters( 'the_content', get_the_content(null, false, 254)) !!}
     @if(have_posts())
         @while(have_posts()) @php the_post(); @endphp
-            @php the_content(); @endphp
+            
 
 
 	    @if( get_field('enable_filtering') )

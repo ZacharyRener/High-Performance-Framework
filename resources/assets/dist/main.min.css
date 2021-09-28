@@ -33,6 +33,150 @@ body:not(.home) .content {
 body:not(.home) .main-container > section > .container > .row > .col-md-8.about-body {
   padding-bottom: 78px; }
 
+div#gform_wrapper_3 {
+  background: linear-gradient(180deg, #f1f1f1 0%, rgba(255, 255, 255, 0) 100%);
+  border-top: 7px solid #4d4d4d; }
+
+input#gform_submit_button_3 {
+  background: #00a0a6 !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px !important;
+  padding: 12px 40px !important; }
+  input#gform_submit_button_3:hover {
+    background: #4d4d4d !important;
+    color: white !important; }
+
+.page-id-668 aside strong {
+  color: #1c2b7f;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-size: 16px; }
+
+.page-id-668 aside > p, .page-id-668 body:not(.home) .main-container .about-body aside > li, body:not(.home) .main-container .about-body .page-id-668 aside > li {
+  font-weight: 600;
+  font-size: 16px !important; }
+
+.page-id-668 aside a {
+  color: #01b8bf !important; }
+
+.page-id-668 aside .navigation > ul {
+  display: none; }
+
+.page-id-668 aside .navigation {
+  margin-bottom: 50px; }
+
+.single-project .thumb-slide img {
+  width: 150px;
+  height: 115px;
+  object-fit: cover;
+  background-color: #1c2b7f;
+  margin-right: 8px;
+  object-position: left; }
+
+.single-project .slideset {
+  display: flex;
+  overflow-x: hidden !important; }
+
+.single-project .mask {
+  overflow-x: hidden; }
+
+.single-project .thumb-active img::after {
+  /* position: absolute; */
+  /* content: ''; */
+  /* top: 0; */
+  /* left: 0; */
+  width: 150px;
+  height: 80px;
+  background-color: red; }
+
+.single-project .thumb-active img {
+  position: relative; }
+
+.single-project .thumb-slide.active.thumb-active {
+  position: relative; }
+
+.single-project a.btn-thumb-prev.disabled {
+  display: none; }
+
+.single-project a.btn-thumb-next {
+  display: none; }
+
+.single-project .thumbnails.gallery-js-ready.autorotation-disabled {
+  margin: 30px 0; }
+
+.single-project .visual.gallery-visual {
+  margin: 30px 0; }
+
+.single-project aside > .navigation > h5 {
+  font-weight: 500;
+  color: #990000;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 1.3em;
+  letter-spacing: 0.8px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 50px;
+  margin-bottom: 0; }
+
+.single-project .navigation {
+  line-height: 1.8em !important;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px !important;
+  margin-bottom: 35px; }
+
+.single-project aside .navigation > p, .single-project aside body:not(.home) .main-container .about-body .navigation > li, body:not(.home) .main-container .about-body .single-project aside .navigation > li {
+  margin-bottom: 0 !important; }
+
+.single-project .portfolio-content-wrapper.sidebar-box.sidebar-offer {
+  margin-top: 50px; }
+
+.single-project img:hover {
+  opacity: 0.5; }
+
+.slide.active {
+  height: 471px;
+  max-width: 800px;
+  background-size: cover; }
+
+.single-project .thumb-slide {
+  background: #1c2b7f; }
+
+.single-project aside h4 {
+  color: #4d4d4d !important;
+  font-weight: 600 !important; }
+
+.single-project aside h5 {
+  color: #1c2b7f !important;
+  text-transform: uppercase;
+  font-size: 15px !important;
+  letter-spacing: 1.1px;
+  font-weight: 700 !important; }
+
+.single-project aside#secondary {
+  color: black;
+  font-size: 15px; }
+
+.single-project aside .navigation ul {
+  display: none; }
+
+.single-project .navigation {
+  margin-bottom: 50px !important; }
+
+.single-project .thumb-slide {
+  margin-right: 20px; }
+
+.single-project .visual.gallery-visual,
+.single-project .gallery-visual * {
+  overflow: hidden !important;
+  max-width: 100%; }
+
+.slide-txt.done {
+  padding-right: 100px !important; }
+  @media (max-width: 768px) {
+    .slide-txt.done {
+      padding-right: 0 !important; } }
+
 /* ============================================================== *
  * Utility Menu Colors                                            *
  * ============================================================== */
@@ -554,7 +698,11 @@ input#s::after {
   top: 25%;
   right: 0 !important;
   width: 50%;
-  padding-right: 0 !important; }
+  padding-right: 100px !important; }
+  @media (max-width: 768px) {
+    .home .slide-txt {
+      width: 100% !important;
+      padding: 0 30px !important; } }
   @media (max-width: 768px) {
     .home .slide-txt {
       top: 50%;
@@ -581,7 +729,7 @@ input#s::after {
 
 .home .home-slider .owl-slide,
 .home .home-slider {
-  max-height: 100vh;
+  max-height: 60vh;
   min-height: 700px; }
 
 .home .content {
@@ -591,6 +739,23 @@ input#s::after {
 .home .slide-vid source {
   width: 100%;
   object-fit: cover; }
+
+.pathway-wrapper {
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+section .owl-wrapper-outer img {
+  height: 150px;
+  object-fit: contain;
+  object-position: center; }
+
+section#header {
+  width: 100vw; }
+
+@media (max-width: 768px) {
+  #mobile-menu > div {
+    height: 60vh;
+    overflow-y: scroll; } }
 
 .quick-hit {
   padding-top: 100px;
@@ -1437,7 +1602,7 @@ section.body-section.seo-copy {
   background: white; }
 
 .col-sm-12.a-e-p-buttons.row {
-  padding-left: 50px !important; }
+  padding-left: 20px !important; }
 
 .pathways {
   margin-bottom: 0 !important; }
@@ -1538,13 +1703,16 @@ body:not(.home) .gform_wrapper form {
   padding: 0 !important;
   margin: 0 !important; }
   body:not(.home) .gform_wrapper form input[type="text"],
-  body:not(.home) .gform_wrapper form textarea {
+  body:not(.home) .gform_wrapper form textarea,
+  body:not(.home) .gform_wrapper form input[type="email"] {
     border: 2px solid #d9d9d9 !important;
     padding-left: 15px;
     border-radius: 2px; }
     body:not(.home) .gform_wrapper form input[type="text"], body:not(.home) .gform_wrapper form input[type="text"]::placeholder,
     body:not(.home) .gform_wrapper form textarea,
-    body:not(.home) .gform_wrapper form textarea::placeholder {
+    body:not(.home) .gform_wrapper form textarea::placeholder,
+    body:not(.home) .gform_wrapper form input[type="email"],
+    body:not(.home) .gform_wrapper form input[type="email"]::placeholder {
       font-family: "Arimo", sans-serif;
       font-weight: 400 !important;
       font-size: 14px !important;
@@ -2238,13 +2406,16 @@ body:not(.home) .main-container .about-body .page-template-template-blog .featur
   padding: 0 !important;
   margin: 0 !important; }
   .page-template-template-blog .gform_wrapper form input[type="text"],
-  .page-template-template-blog .gform_wrapper form textarea {
+  .page-template-template-blog .gform_wrapper form textarea,
+  .page-template-template-blog .gform_wrapper form input[type="email"] {
     border: 2px solid #d9d9d9 !important;
     padding-left: 15px;
     border-radius: 2px; }
     .page-template-template-blog .gform_wrapper form input[type="text"], .page-template-template-blog .gform_wrapper form input[type="text"]::placeholder,
     .page-template-template-blog .gform_wrapper form textarea,
-    .page-template-template-blog .gform_wrapper form textarea::placeholder {
+    .page-template-template-blog .gform_wrapper form textarea::placeholder,
+    .page-template-template-blog .gform_wrapper form input[type="email"],
+    .page-template-template-blog .gform_wrapper form input[type="email"]::placeholder {
       font-family: "Arimo", sans-serif;
       font-weight: 400 !important;
       font-size: 14px !important;
@@ -2527,13 +2698,16 @@ body:not(.home) .main-container .about-body .page-template-template-blog .featur
   padding: 0 !important;
   margin: 0 !important; }
   .single-library .gform_wrapper form input[type="text"],
-  .single-library .gform_wrapper form textarea {
+  .single-library .gform_wrapper form textarea,
+  .single-library .gform_wrapper form input[type="email"] {
     border: 2px solid #d9d9d9 !important;
     padding-left: 15px;
     border-radius: 2px; }
     .single-library .gform_wrapper form input[type="text"], .single-library .gform_wrapper form input[type="text"]::placeholder,
     .single-library .gform_wrapper form textarea,
-    .single-library .gform_wrapper form textarea::placeholder {
+    .single-library .gform_wrapper form textarea::placeholder,
+    .single-library .gform_wrapper form input[type="email"],
+    .single-library .gform_wrapper form input[type="email"]::placeholder {
       font-family: "Arimo", sans-serif;
       font-weight: 400 !important;
       font-size: 14px !important;
@@ -2657,18 +2831,24 @@ body:not(.home) .main-container .about-body .page-template-template-blog .featur
   margin: 0 !important; }
   .single-post .gform_wrapper form input[type="text"],
   .single-post .gform_wrapper form textarea,
+  .single-post .gform_wrapper form input[type="email"],
   .single-news .gform_wrapper form input[type="text"],
-  .single-news .gform_wrapper form textarea {
+  .single-news .gform_wrapper form textarea,
+  .single-news .gform_wrapper form input[type="email"] {
     border: 2px solid #d9d9d9 !important;
     padding-left: 15px;
     border-radius: 2px; }
     .single-post .gform_wrapper form input[type="text"], .single-post .gform_wrapper form input[type="text"]::placeholder,
     .single-post .gform_wrapper form textarea,
     .single-post .gform_wrapper form textarea::placeholder,
+    .single-post .gform_wrapper form input[type="email"],
+    .single-post .gform_wrapper form input[type="email"]::placeholder,
     .single-news .gform_wrapper form input[type="text"],
     .single-news .gform_wrapper form input[type="text"]::placeholder,
     .single-news .gform_wrapper form textarea,
-    .single-news .gform_wrapper form textarea::placeholder {
+    .single-news .gform_wrapper form textarea::placeholder,
+    .single-news .gform_wrapper form input[type="email"],
+    .single-news .gform_wrapper form input[type="email"]::placeholder {
       font-family: "Arimo", sans-serif;
       font-weight: 400 !important;
       font-size: 14px !important;
@@ -2849,7 +3029,8 @@ div#wp-filter-root {
   font-size: 15px !important; }
 
 .page-template-template-guides .btn,
-.single-library .btn {
+.single-library .btn,
+.page-template-template-webinar .btn {
   background: #00a0a6 !important;
   font-weight: 600 !important;
   padding: 13px 25px !important;
@@ -2857,7 +3038,8 @@ div#wp-filter-root {
   letter-spacing: 2px !important;
   margin-top: 30px !important; }
 
-.page-template-template-guides .btn:hover {
+.page-template-template-guides .btn:hover,
+.page-template-template-webinar .btn:hover {
   background-color: #1c2b7f !important;
   color: white !important; }
 
