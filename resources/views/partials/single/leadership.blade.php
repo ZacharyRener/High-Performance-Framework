@@ -228,43 +228,81 @@
 
 <div id="accordion" role="tablist">
 
+    <?php
+
+    $collapse_count = 0;
+    while (have_rows("tabs")){ the_row();?>
+        
+        <div class="card"> 
+
+            <div class="card-header" role="tab" id="heading<?php echo $collapse_count; ?>">
+                <h5 class="mb-0">
+                <a class='collapsed' data-toggle="collapse" href="#collapse<?php echo $collapse_count; ?>" role="button" aria-expanded="true" aria-controls="collapse<?php echo $collapse_count; ?>">
+                    <?php the_sub_field("heading"); ?>
+                    <span class="accordion-icon"></span>
+                </a>
+                </h5>
+            </div>
+
+            <div id="collapse<?php echo $collapse_count; ?>" class="collapse " role="tabpanel" aria-labelledby="heading<?php echo $collapse_count; ?>" data-parent="#accordion">
+                <div class="card-body">
+                <?php the_sub_field('content'); ?>
+                </div>
+            </div>
+        
+        </div>
 
 
+    <?php $collapse_count++; 
 
-<?php
+    }
 
-$collapse_count = 0;
-while (have_rows("tabs")){ the_row();?>
-    <?php $collapse_count++; ?>
+    ?>
+    <?php
+    
+
+    $args = [
+        'post_type' => 'any',
+        'meta_key' => 'team_member',
+        'meta_value' => get_the_ID(),
+        'posts' => -1,
+    ];
+    $the_query = new WP_Query($args);
+    if($the_query->have_posts()):
+    
+    ?>
     <div class="card"> 
 
-    <div class="card-header" role="tab" id="heading<?php echo $collapse_count; ?>">
-        <h5 class="mb-0">
-        <a class='collapsed' data-toggle="collapse" href="#collapse<?php echo $collapse_count; ?>" role="button" aria-expanded="true" aria-controls="collapse<?php echo $collapse_count; ?>">
-            <?php the_sub_field("heading"); ?>
-            <span class="accordion-icon"></span>
-        </a>
-        </h5>
-    </div>
-
-    <div id="collapse<?php echo $collapse_count; ?>" class="collapse " role="tabpanel" aria-labelledby="heading<?php echo $collapse_count; ?>" data-parent="#accordion">
-        <div class="card-body">
-        <?php the_sub_field('content'); ?>
+        <div class="card-header" role="tab" id="heading<?php echo $collapse_count; ?>">
+            <h5 class="mb-0">
+            <a class='collapsed' data-toggle="collapse" href="#collapse<?php echo $collapse_count; ?>" role="button" aria-expanded="true" aria-controls="collapse<?php echo $collapse_count; ?>">
+                Related Insights
+                <span class="accordion-icon"></span>
+            </a>
+            </h5>
         </div>
-    </div>
+
+        <div id="collapse<?php echo $collapse_count; ?>" class="collapse " role="tabpanel" aria-labelledby="heading<?php echo $collapse_count; ?>" data-parent="#accordion">
+            <div class="card-body">
+            <?php 
+                echo "<ul>";
+                while($the_query->have_posts()):
+                    $the_query->the_post();
+
+                    $title = get_the_title();
+                    $link = get_the_permalink();
+                    echo "<li><a href='$link'>$title</a></li>";
+
+                endwhile;
+                echo "</ul>";
+    
+
+            ?>
+            </div>
+        </div>
     
     </div>
-
-
-<?php
-
-}
-
-?>
-
-
-
-
+    <?php endif; ?>
 
 </div>
 

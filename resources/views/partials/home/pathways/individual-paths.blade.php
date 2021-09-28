@@ -12,7 +12,7 @@
             $pathway_icon = $pathway->pathway_icon;
             $pathway_bg = $pathway->pathway_bg;
             $backgroundImage = !empty($pathway->pathway_bg)
-                ? "background: url($pathway->pathway_bg);"
+                ? "background-image: url($pathway->pathway_bg);"
                 : '';
             @endphp
 

@@ -1066,7 +1066,8 @@ div#wp-filter-root {
 }
 
 .page-template-template-guides .btn,
-.single-library .btn {
+.single-library .btn,
+.page-template-template-webinar .btn {
   background: #00a0a6 !important;
   font-weight: 600 !important;
   padding: 13px 25px !important;
@@ -1075,9 +1076,12 @@ div#wp-filter-root {
   margin-top: 30px !important;
 }
 
-.page-template-template-guides .btn:hover {
-  background-color: #1c2b7f !important;
-  color: white !important;
+.page-template-template-guides,
+.page-template-template-webinar {
+  .btn:hover {
+    background-color: #1c2b7f !important;
+    color: white !important;
+  }
 }
 
 .library-thumb > * {

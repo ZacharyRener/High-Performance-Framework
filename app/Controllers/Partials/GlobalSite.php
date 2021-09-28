@@ -10,7 +10,7 @@ trait GlobalSite {
         $leadershipParentId = 247;
         $libraryParentId = 649;
         $newsParentId = 247;
-        $projectParentId = 480;
+        $projectParentId = 712;
         $postParentId = 649;
         $careersParentId = 760;
 
@@ -49,7 +49,7 @@ trait GlobalSite {
         $leadershipParentId = 247;
         $libraryParentId = 649;
         $newsParentId = 247;
-        $projectParentId = 735;
+        $projectParentId = 712;
         $postParentId = 649;
         $careersParentId = 760;
 
