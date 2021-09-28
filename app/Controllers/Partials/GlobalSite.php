@@ -35,6 +35,12 @@ trait GlobalSite {
         if(get_post_type() == "position")
             $parentId = $careersParentId;
 
+        if($this->uri() == '/insights/guides/')
+            $parentId = $libraryParentId;
+
+        if(is_search())
+            $parentId = $postParentId;
+
         return $parentId;
         
     }
@@ -74,6 +80,10 @@ trait GlobalSite {
         if(get_post_type() == "position")
             $parentId = $careersParentId;
 
+        if(is_404()){
+            $parentId = -1;
+        }
+
         $mainLink = get_the_permalink($parentId);
         $mainTitle = get_the_title($parentId);
 
@@ -92,6 +102,8 @@ trait GlobalSite {
 
         if($parentId == $projectParentId)
             $mainTitle = 'Projects';
+        if(is_404())
+            $mainTitle = 'Page Not Found';
         else if(is_search())
                 $mainTitle = 'Search';
         $output .= "
@@ -168,6 +180,10 @@ trait GlobalSite {
             $wordCount*2-1
             )
         );
+    }
+
+    public function uri() {
+        return $_SERVER['REQUEST_URI'];
     }
 
     public function default_sidebar() {

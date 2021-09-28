@@ -13,7 +13,7 @@
                 <h1>{!! get_the_title() !!}</h1>
             @endif
             @if(get_post_type() == 'post')
-                <p class='author'>{{ get_the_date() }}<span class='divider'>|</span>{{get_the_author()}}</p>
+                <p class='author'><span class='first'>{{ get_the_date() }}</span><span class='divider'>|</span><span class="last">{{get_the_author()}}</span></p>
                 @if(has_post_thumbnail())
                 {!! get_the_post_thumbnail() !!}
                 @endif

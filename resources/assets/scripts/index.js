@@ -15,15 +15,18 @@ import SingleLeadership from "./_single-leadership";
 
 document.addEventListener("DOMContentLoaded", () => {
   load("page", () => new Global());
+  load("archive", () => new Global());
+  load("search", () => new Global());
+  load("404", () => new Global());
   load("home", () => new Home());
   if (document.querySelector("#sticky-sections .navigation") != null) {
     load("page", () => new StickySections());
   }
   load("single", () => new Global());
-  load("page-template-template-projects", () => new Experience());
+  load("post-type-archive-project", () => new Experience());
   load("single-project", () => new SingleProject());
   load("page-template-template-blog", () => new TheBlog());
-  load("page-template-template-leadership", () => new Experience());
+  load("post-type-archive-leadership", () => new Experience());
   load("page-template-template-whitepapers", () => new Whitepapers());
   load("page-template-template-guides", () => new Guides());
   load("page-template-template-webinar", () => new Webinars());

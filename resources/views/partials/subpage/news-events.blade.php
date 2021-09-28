@@ -26,7 +26,7 @@ function get_snippet( $str, $wordCount = 10 ) {
     $prev_year = null;
     if ( have_posts() ) {
     while ( have_posts() ) {
-        the_post();
+        //the_post();
         $this_year = get_the_date('Y');
         if ($prev_year != $this_year) {
             // Year boundary

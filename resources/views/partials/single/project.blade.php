@@ -16,7 +16,7 @@ if( has_post_thumbnail() || $gallery ) : ?>
 				<?php if ( $gallery ) : ?>
 					<?php foreach( $gallery as $image ) : ?>
 						<?php if($image['image']) { ?>
-							<div class="slide" style="background-image: url('<?php echo wp_get_attachment_image_src($image['image'])[0]; ?>'); background-position: <?php the_field('gallery_thumbnails_align'); ?>"></div>
+							<div class="slide" style="background-image: url('<?php echo wp_get_attachment_image_url($image['image'], 'full'); ?>'); background-position: <?php the_field('gallery_thumbnails_align'); ?>"></div>
 						<?php }?>
 						<?php if($image['video']) { ?>
 							<?php $theVid = $image['video']; ?>

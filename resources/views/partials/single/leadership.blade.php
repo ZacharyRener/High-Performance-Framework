@@ -269,14 +269,14 @@
     ];
     $the_query = new WP_Query($args);
     if($the_query->have_posts()):
-    
+        
     ?>
     <div class="card"> 
 
         <div class="card-header" role="tab" id="heading<?php echo $collapse_count; ?>">
             <h5 class="mb-0">
             <a class='collapsed' data-toggle="collapse" href="#collapse<?php echo $collapse_count; ?>" role="button" aria-expanded="true" aria-controls="collapse<?php echo $collapse_count; ?>">
-                Related Insights
+                Insights By {{get_field('lds_first_name')}}
                 <span class="accordion-icon"></span>
             </a>
             </h5>
@@ -294,6 +294,7 @@
                     echo "<li><a href='$link'>$title</a></li>";
 
                 endwhile;
+                wp_reset_query();
                 echo "</ul>";
     
 
@@ -324,6 +325,8 @@
 <?php 
 ?>
 
+@include('partials.single.featured-projects')
+
 </div>
 
 <script>
@@ -331,3 +334,5 @@
         jQuery('.card:nth-child(1) a').click()
     })
 </script>
+
+

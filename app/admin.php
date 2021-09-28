@@ -77,7 +77,7 @@ add_action( 'init', function(){
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
 		'has_archive'           => true,		
-		'exclude_from_search'   => false,
+		'exclude_from_search'   => true,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 	);
@@ -131,6 +131,7 @@ add_action( 'init', function(){
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
+        'rewrite' => array('slug'=>'our-work', 'with_front'=>false)
 	);
 	register_post_type( 'project', $args );
 
@@ -181,6 +182,7 @@ add_action( 'init', function(){
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
+        'rewrite'=>array('slug'=>'who-we-are/our-team', 'with_front'=>false)
 	);
 	register_post_type( 'leadership', $args );
 
@@ -244,6 +246,7 @@ add_action( 'init', function(){
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
         'show_in_rest'          => true,
+        'rewrite'=>array('slug'=>'who-we-are/news-events', 'with_front'=>false)
 	);
 	register_post_type( 'news', $args );
 
@@ -372,6 +375,7 @@ add_action( 'init', function(){
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
+        'rewrite'=>array('slug'=>'insights', 'with_front'=>false)
 	);
 	register_post_type( 'library', $args );
 

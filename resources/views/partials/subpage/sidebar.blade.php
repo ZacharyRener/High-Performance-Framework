@@ -5,7 +5,7 @@
         {!! $child_pages !!}
             
         {{ $default_sidebar }}
-    
+
         @if(get_post_type() == "project")
             @include('partials.single.project-sidebar')
         @endif
@@ -14,7 +14,7 @@
             {!! the_field('additional_sidebar_content') !!}
         @endif
 
-        @if(get_post_type() == "post")
+        @if(get_post_type() === "post" && !is_404() && !is_search())
             @include('partials.subpage.blog-sidebar')
         @endif
 
