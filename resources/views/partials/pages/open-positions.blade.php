@@ -1,5 +1,5 @@
 <div class="col-md-8 col-md-offset-1 col-sm-8 body-txt pull-right about-body">
-    @include('partials.subpage.sticky-sections')
+    @include('partials.pages.modules.sticky-sections')
     {!! get_the_content() !!}
     @while($job_positions->have_posts()) @php $job_positions->the_post(); @endphp
 

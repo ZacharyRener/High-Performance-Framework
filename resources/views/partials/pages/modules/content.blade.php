@@ -1,5 +1,5 @@
 <div class="col-md-8 col-md-offset-1 col-sm-8 body-txt pull-right about-body">
-    @include('partials.subpage.sticky-sections')
+    @include('partials.pages.modules.sticky-sections')
     @if(have_posts())
         @while(have_posts()) @php the_post(); @endphp
             @if(get_post_type() == 'news')

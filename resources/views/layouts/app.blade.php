@@ -1,10 +1,10 @@
 <!doctype html>
 <html {!! get_language_attributes() !!}>
-  @include('partials.head')
+  @include('partials.global.head')
   <body @php body_class() @endphp>
     @php do_action('get_header') @endphp
-    @include('partials.dependencies')
-    @include('partials.header')
+    @include('partials.global.dependencies')
+    @include('partials.global.navigation.header')
     <div class="wrap" role="document">
       <div class="content">
         <main class="main">
@@ -25,7 +25,7 @@
         </main>
       </div>
     </div>
-    @include('partials.footer')
+    @include('partials.global.footer')
     @php wp_footer() @endphp
   </body>
 </html>

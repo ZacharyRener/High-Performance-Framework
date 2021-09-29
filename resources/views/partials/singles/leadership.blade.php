@@ -325,7 +325,7 @@
 <?php 
 ?>
 
-@include('partials.single.featured-projects')
+@include('partials.singles.modules.featured-projects')
 
 </div>
 

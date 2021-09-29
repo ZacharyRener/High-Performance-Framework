@@ -7,7 +7,7 @@
         {{ $default_sidebar }}
 
         @if(get_post_type() == "project")
-            @include('partials.single.project-sidebar')
+            @include('partials.singles.modules.project-sidebar')
         @endif
 
         @if(get_field('additional_sidebar_content'))
@@ -15,12 +15,12 @@
         @endif
 
         @if(get_post_type() === "post" && !is_404() && !is_search())
-            @include('partials.subpage.blog-sidebar')
+            @include('partials.pages.modules.blog-sidebar')
         @endif
 
         <div class='offer-spacer'></div>
         <div class='offer-container'>
-            @include('partials.subpage.offers')
+            @include('partials.pages.modules.offers')
         </div>
 
     </aside>

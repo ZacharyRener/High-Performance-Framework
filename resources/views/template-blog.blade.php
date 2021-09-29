@@ -3,10 +3,10 @@
 @extends('layouts.app')
 
 @section('header')
-    @include('partials.subpage.header-image')
+    @include('partials.pages.modules.header-image')
 @endsection
 
 @section('content')
-    @include('partials.subpage.blog')
-    @include('partials.subpage.sidebar')    
+    @include('partials.pages.blog')
+    @include('partials.global.sidebar')    
 @endsection

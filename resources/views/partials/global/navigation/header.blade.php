@@ -37,7 +37,7 @@
                 @endif
                 <nav id="primary">
                     @if($uses_tray_menu)
-                        @include('partials.tray-menu')
+                        @include('partials.global.navigation.tray-menu')
                     @else
                         {{ wp_nav_menu( array(
                             'menu'              => 2,
