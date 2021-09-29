@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   load("single-project", () => new SingleProject());
   load("page-template-template-blog", () => new TheBlog());
   load("post-type-archive-leadership", () => new Experience());
-  load("page-template-template-whitepapers", () => new Whitepapers());
-  load("page-template-template-guides", () => new Guides());
+  load("template-library-item", () => new Whitepapers());
+  load("template-library-item", () => new Guides());
   load("page-template-template-webinar", () => new Webinars());
 });

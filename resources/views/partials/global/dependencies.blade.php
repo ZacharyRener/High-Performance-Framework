@@ -35,7 +35,7 @@
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 {{-- Compiled JS --}}
-<script src="{{ $theme_url }}/assets/dist/main.js"></script>
+<script src="{{ $theme_url }}/assets/compiled/main.js"></script>
 
 {{-- Fonts --}}
 <link rel="preconnect" href="https://fonts.googleapis.com">

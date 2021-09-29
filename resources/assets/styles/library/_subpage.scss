@@ -703,8 +703,8 @@ body:not(.home) {
   margin-top: 100px !important;
 }
 
-.page-template-template-whitepapers,
-.page-template-template-guides,
+.template-library-item,
+.template-library-item,
 .page-template-template-webinar {
   .media-boxes-search {
     @include searchbar;
@@ -771,9 +771,9 @@ body:not(.home) {
   }
 }
 
-.page-template-template-guides,
+.template-library-item,
 .page-template-template-webinar,
-.page-template-template-whitepapers {
+.template-library-item {
   h3 {
     margin-top: 30px !important;
     a {
@@ -1070,7 +1070,7 @@ div#wp-filter-root {
   font-size: 15px !important;
 }
 
-.page-template-template-guides .btn,
+.template-library-item .btn,
 .single-library .btn,
 .page-template-template-webinar .btn {
   background: #00a0a6 !important;
@@ -1081,7 +1081,7 @@ div#wp-filter-root {
   margin-top: 30px !important;
 }
 
-.page-template-template-guides,
+.template-library-item,
 .page-template-template-webinar {
   .btn:hover {
     background-color: #1c2b7f !important;

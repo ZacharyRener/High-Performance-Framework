@@ -7,9 +7,6 @@
 @endsection
 
 @section('content')
-    @php
-    $terms = get_field('type_of_library');
-    @endphp
    @component('partials.pages.library-item')
         @slot('library_type')
             {{ $type_of_library->slug }}

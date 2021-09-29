@@ -23,10 +23,9 @@ add_action('customize_preview_init', function () {
     wp_enqueue_script('sage/customizer.js', asset_path('scripts/customizer.js'), ['customize-preview'], null, true);
 });
 
-wp_enqueue_style('main', get_template_directory_uri() . '/assets/dist/main.min.css', array(), filemtime(get_template_directory() . '/assets/dist/main.min.css'), false);
+wp_enqueue_style('main', get_template_directory_uri() . '/assets/compiled/main.min.css', array(), filemtime(get_template_directory() . '/assets/compiled/main.min.css'), false);
 
 if( function_exists('acf_add_options_page') ) { acf_add_options_page(); }
-
 
 add_action( 'init', function(){
 

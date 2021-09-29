@@ -1,7 +1,7 @@
-<link rel="stylesheet" href="{{ get_stylesheet_directory_uri() }}/assets/owlcarousel/owl.carousel.min.css">
-<link rel="stylesheet" href="{{ get_stylesheet_directory_uri() }}/assets/owlcarousel/owl.theme.min.css">
-<link rel="stylesheet" href="{{ get_stylesheet_directory_uri() }}/assets/owlcarousel/owl.transitions.css">
-<script src="{{ get_stylesheet_directory_uri() }}/assets/owlcarousel/owl.carousel.min.js"></script>
+<link rel="stylesheet" href="{{ get_stylesheet_directory_uri() }}/assets/scripts/inc/owlcarousel/owl.carousel.min.css">
+<link rel="stylesheet" href="{{ get_stylesheet_directory_uri() }}/assets/scripts/inc/owlcarousel/owl.theme.min.css">
+<link rel="stylesheet" href="{{ get_stylesheet_directory_uri() }}/assets/scripts/inc/owlcarousel/owl.transitions.css">
+<script src="{{ get_stylesheet_directory_uri() }}/assets/scripts/inc/owlcarousel/owl.carousel.min.js"></script>
 
 @php
 $slide_transition_speed = esc_html( get_field( 'slide_transition_speed' ) );
