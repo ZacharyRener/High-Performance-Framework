@@ -41,6 +41,9 @@ trait GlobalSite {
         if(is_search())
             $parentId = $postParentId;
 
+        if(is_post_type_archive('library'))
+            $parentdId = $libraryParentId;
+
         return $parentId;
         
     }

@@ -39,20 +39,18 @@ export default class Experience {
 
   loadProjects() {
     jQuery(document).ajaxStop(function () {
-      //console.log("ajax complete");
       jQuery(".selectpicker").selectpicker(); // re-init the thing on ajax done (sort of like a page load)
     });
-    jQuery(function ($) {
-      $("#grid").mediaBoxes({
-        search: "#search",
-        filterContainer: ".filters",
-        searchTarget: ".searchtitle",
-        columns: 3,
-        boxesToLoadStart: 24,
-        boxesToLoad: 24,
-        horizontalSpaceBetweenBoxes: 30,
-        verticalSpaceBetweenBoxes: 30,
-      });
+
+    jQuery("#grid").mediaBoxes({
+      //search: "#search",
+      //filterContainer: ".filters",
+      //searchTarget: ".searchtitle",
+      columns: 3,
+      boxesToLoadStart: 24,
+      boxesToLoad: 24,
+      horizontalSpaceBetweenBoxes: 30,
+      verticalSpaceBetweenBoxes: 30,
     });
   }
 }

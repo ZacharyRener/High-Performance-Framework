@@ -14,6 +14,7 @@ import Guides from "./_guides";
 import SingleLeadership from "./_single-leadership";
 
 document.addEventListener("DOMContentLoaded", () => {
+  load("single-leadership", () => new SingleLeadership());
   load("page", () => new Global());
   load("archive", () => new Global());
   load("search", () => new Global());
@@ -30,5 +31,4 @@ document.addEventListener("DOMContentLoaded", () => {
   load("page-template-template-whitepapers", () => new Whitepapers());
   load("page-template-template-guides", () => new Guides());
   load("page-template-template-webinar", () => new Webinars());
-  load("single-leadership", () => new SingleLeadership());
 });

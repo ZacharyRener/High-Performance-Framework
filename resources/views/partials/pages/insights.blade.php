@@ -1,7 +1,7 @@
 <div class="col-md-8 col-md-offset-1 col-sm-8 body-txt pull-right about-body">
-<?php if ( get_field( 'featured_content_offer' ) ): ?>
+<?php if ( get_field( 'featured_content_offer', 649 ) ): ?>
     <?php
-    $feat_offer_id = get_field( 'featured_content_offer' );
+    $feat_offer_id = get_field( 'featured_content_offer', 649 );
     ?>
     <div class="featured-content-wrapper sidebar-box">
         <div class="featured-content">
@@ -22,9 +22,9 @@
 
 <?php endif; ?>
 
-<?php if ( have_rows( 'library_categories' ) ): ?>
+<?php if ( have_rows( 'library_categories', 649 ) ): ?>
 <div class='row'>
-    <?php while ( have_rows( 'library_categories' ) ): the_row();
+    <?php while ( have_rows( 'library_categories', 649 ) ): the_row();
         $lib_title        = get_sub_field( 'lib_title' );
         $lib_image        = get_sub_field( 'lib_image' );
         $lib_excerpt      = get_sub_field( 'lib_excerpt' );

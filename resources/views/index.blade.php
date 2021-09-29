@@ -25,6 +25,10 @@
         @include('partials.pages.leadership')
         @include('partials.global.sidebar')   
 
+    @elseif(is_post_type_archive('library'))
+        @include('partials.pages.insights')
+        @include('partials.global.sidebar')    
+
     @elseif(is_post_type_archive())
         404: Archive Not Found
     
