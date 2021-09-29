@@ -28,6 +28,36 @@
     @elseif(is_post_type_archive())
         404: Archive Not Found
     
+    {{-- Search --}}
+    @elseif(is_search())
+        @include('partials.subpage.excerpt-content')
+        @include('partials.subpage.sidebar') 
+
+    {{-- Leadership --}}
+    @elseif(get_post_type() == "leadership")
+        @include('partials.single.leadership')
+        @include('partials.subpage.sidebar')
+
+    {{-- Library --}}
+    @elseif(get_post_type() == "library")
+        @include('partials.single.library')
+        @include('partials.subpage.sidebar')
+
+    {{-- Post --}}
+    @elseif(get_post_type() == "post")
+        @include('partials.subpage.content')
+        @include('partials.subpage.sidebar')  
+
+    {{-- Post --}}
+    @elseif(get_post_type() == "news")
+        @include('partials.subpage.content')
+        @include('partials.subpage.sidebar') 
+
+    {{-- News --}}
+    @elseif(get_post_type() == "project")
+        @include('partials.single.project')
+        @include('partials.subpage.sidebar')
+
     {{-- Default --}}
     @else
         @include('partials.subpage.content')

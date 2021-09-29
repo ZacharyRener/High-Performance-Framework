@@ -1,4 +1,4 @@
-@php /* Template Name: Webinar */ @endphp
+@php /* Template Name: Library Item */ @endphp
 
 @extends('layouts.app')
 
@@ -7,9 +7,12 @@
 @endsection
 
 @section('content')
+    @php
+    $terms = get_field('type_of_library');
+    @endphp
    @component('partials.subpage.library-item')
         @slot('library_type')
-            webinar
+            {{ $type_of_library->slug }}
         @endslot
     @endcomponent
     @include('partials.subpage.sidebar')    

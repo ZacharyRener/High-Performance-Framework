@@ -3,7 +3,7 @@
     <aside id="secondary" class="widget-area" role="complementary">
         
         {!! $child_pages !!}
-            
+
         {{ $default_sidebar }}
 
         @if(get_post_type() == "project")
